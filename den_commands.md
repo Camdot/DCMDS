@@ -27,10 +27,10 @@
 |oldhelp|||
 |szr_stats|Report serializer statistics.|Usage: szr_stats|
 |vfs_ls|List directory contents in the VFS.|Usage: vfs_list <path><br>Example:<br>vfs_list /Assemblies|
-|cvar|Gets or sets a CVar.|Usage: cvar <name | ?> [value]<br>If a value is passed, the value is parsed and stored as the new value of the CVar.<br>If not, the current value of the CVar is displayed.<br>Use 'cvar ?' to get a list of all registered CVars.|
+|cvar|Gets or sets a CVar.|Usage: cvar <name \| ?> [value]<br>If a value is passed, the value is parsed and stored as the new value of the CVar.<br>If not, the current value of the CVar is displayed.<br>Use 'cvar ?' to get a list of all registered CVars.|
 |cvar_subs|Lists the OnValueChanged subscriptions for a CVar.|Usage: cvar_subs <name>|
 |audio_length|Shows the length of an audio file|Usage: audio_length <file name>|
-|vv|Opens View Variables.|Usage: vv <entity ID|IoC interface name|SIoC interface name>|
+|vv|Opens View Variables.|Usage: vv <entity ID\|IoC interface name\|SIoC interface name>|
 |devwindow|Dev Window|Usage: devwindow|
 |testopenfile|||
 |scene|Immediately changes the UI scene/state.|Usage: scene <className>|
@@ -58,8 +58,8 @@
 |vram|Displays video memory usage statics by the game.|Usage: vram|
 |net_entityreport|Toggles the net entity report panel.|Usage: net_entityreport|
 |net_graph|Toggles the net statistics panel.|Usage: net_graph|
-|net_watchent|Dumps all network updates for an EntityId to the console.|Usage: net_watchent <0|EntityUid>|
-|net_draw_interp|Toggles the debug drawing of the network interpolation.|Usage: net_draw_interp <0|EntityUid>|
+|net_watchent|Dumps all network updates for an EntityId to the console.|Usage: net_watchent <0\|EntityUid>|
+|net_draw_interp|Toggles the debug drawing of the network interpolation.|Usage: net_draw_interp <0\|EntityUid>|
 |showspritebb|Toggle whether sprite bounds are shown|Usage: showspritebb|
 |togglelookup|Shows / hides entitylookup bounds via an overlay.|Usage: togglelookup|
 |>|Executes server-side commands|Usage: > <command> [arg] [arg] [arg...]<br>Executes a command on the server. This is necessary if a command with the same name exists on the client, as simply running the command would run the client command first.|
@@ -99,7 +99,7 @@
 |monitorinfo|Monitors info|Usage: monitorinfo <id>|
 |setmonitor|Set monitor|Usage: setmonitor <id>|
 |physics|Shows a debug physics overlay. The arg supplied specifies the overlay.|Usage: physics <aabbs / com / contactnormals / contactpoints / distance / joints / shapeinfo / shapes>|
-|profileEntitySpawning|Profiles entity spawning with n entities|Usage: profileEntitySpawning | profileEntitySpawning <amount> <prototype>|
+|profileEntitySpawning|Profiles entity spawning with n entities|Usage: profileEntitySpawning \| profileEntitySpawning <amount> <prototype>|
 |hardquit|Kills the game client instantly.|Kills the game client instantly, leaving no traces. No telling the server goodbye.|
 |quit|Shuts down the game client gracefully.|Properly shuts down the game client, notifying the connected server and such.|
 |rldloc|Reloads localization (client & server).|Usage: rldloc|
@@ -145,10 +145,10 @@
 |showhealthbars|Toggles health bars above mobs.|Usage: showhealthbars [<DamageContainerId>]|
 |showmechanisms|Makes mechanisms visible, even when they shouldn't be.|Usage: showmechanisms|
 |toggleoutline|Toggles outline drawing on entities.|Usage: toggleoutline|
-|zoom|Sets the zoom of the main eye.|zoom ( <scale> | <X-scale> <Y-scale> )|
+|zoom|Sets the zoom of the main eye.|zoom ( <scale> \| <X-scale> <Y-scale> )|
 |changelog|Opens the changelog|Usage: changelog|
 |showambient|Shows all AmbientSoundComponents in the viewport|showambient|
-|showaccessreaders|Toggles showing access reader permissions on the map|Overlay Info:<br>-Disabled | The access reader is disabled<br>+Unrestricted | The access reader has no restrictions<br>+Set [Index]: [Tag Name]| A tag in an access set (accessor needs all tags in the set to be allowed by the set)<br>+Key [StationUid]: [StationRecordKeyId] | A StationRecordKey that is allowed<br>-Tag [Tag Name] | A tag that is not allowed (takes priority over other allows)|
+|showaccessreaders|Toggles showing access reader permissions on the map|Overlay Info:<br>-Disabled \| The access reader is disabled<br>+Unrestricted \| The access reader has no restrictions<br>+Set [Index]: [Tag Name]\| A tag in an access set (accessor needs all tags in the set to be allowed by the set)<br>+Key [StationUid]: [StationRecordKeyId] \| A StationRecordKey that is allowed<br>-Tag [Tag Name] \| A tag that is not allowed (takes priority over other allows)|
 |pausemap|Pauses a map, pausing all simulation processing on it.|pausemap <map ID>|
 |querymappaused|Check whether a map is paused or not.|querymappaused <map ID>|
 |unpausemap|unpauses a map, resuming all simulation processing on it.|Usage: unpausemap <map ID>|
@@ -191,13 +191,13 @@
 |whitelistadd|Adds the player with the given username to the server whitelist.|Usage: whitelistadd <username or User ID>|
 |whitelistremove|Removes the player with the given username from the server whitelist.|Usage: whitelistremove <username or User ID>|
 |kicknonwhitelisted|Kicks all non-whitelisted players from the server.|Usage: kicknonwhitelisted|
-|createvote|Creates a vote|Usage: createvote <'restart'|'preset'|'map'>|
+|createvote|Creates a vote|Usage: createvote <'restart'\|'preset'\|'map'>|
 |customvote|Creates a custom vote|Usage: customvote <title> <option1> <option2> [option3...]|
 |vote|Votes on an active vote|vote <voteId> <option>|
 |listvotes|Lists currently active votes|Usage: listvotes|
 |cancelvote|Cancels an active vote|Usage: cancelvote <id><br>You can get the ID from the listvotes command.|
-|invokeverb|Invokes a verb with the given name on an entity, with the player entity|invokeverb <playerUid | "self"> <targetUid> <verbName | "interaction" | "activation" | "alternative">|
-|listverbs|Lists all verbs that a player can use on a given entity.|listverbs <playerUid | "self"> <targetUid>|
+|invokeverb|Invokes a verb with the given name on an entity, with the player entity|invokeverb <playerUid \| "self"> <targetUid> <verbName \| "interaction" \| "activation" \| "alternative">|
+|listverbs|Lists all verbs that a player can use on a given entity.|listverbs <playerUid \| "self"> <targetUid>|
 |showvalues|Dumps all stats for a particular category into a table.|showvalues <cargosell / lathesell / melee / itemsize>|
 |adduplink|Creates uplink on selected item and link it to users account|Usage: adduplink [username] [item-id]|
 |sendstationgoal|Sends the selected station target to all faxes that can receive it|Usage: sendstationgoal <Goal Prototype ID>|
@@ -233,7 +233,7 @@
 |set-motd|Sets or clears the Message Of The Day.|set-motd [ message... ]|
 |makesentient|Makes an entity sentient (able to be controlled by a player)|makesentient <entity id>|
 |mindinfo|Lists info for the mind of a specific player.|mindinfo <session ID>|
-|rename|Renames an entity and its cloner entries, ID cards, and PDAs.|rename <Username|EntityUid> <New character name>|
+|rename|Renames an entity and its cloner entries, ID cards, and PDAs.|rename <Username\|EntityUid> <New character name>|
 |griddrag|Allows someone with permissions to drag grids around.|griddrag|
 |planet|Converts the supplied map into a planet with some specific biome.|planet <mapid> <biome>.|
 |resave|||
@@ -271,17 +271,17 @@
 |ghost|Give up on life and become a ghost.|The ghost command turns you into a ghost and makes the character you played permanently catatonic.<br>Please note that you cannot return to your character's body after ghosting.|
 |ghostroles|Opens the ghost role request window.|ghostroles|
 |makeghostrole|Turns an entity into a ghost role.|Usage: makeghostrole <entity uid> <name> <description> [<rules>]|
-|makeghostroleraffled|Turns an entity into a raffled ghost role.|Usage: makeghostroleraffled <entity uid> <name> <description> (<settings prototype> | <initial duration> <extend by> <max duration>) [<rules>]<br>Durations are in seconds.|
+|makeghostroleraffled|Turns an entity into a raffled ghost role.|Usage: makeghostroleraffled <entity uid> <name> <description> (<settings prototype> \| <initial duration> <extend by> <max duration>) [<rules>]<br>Durations are in seconds.|
 |editdecal|Edits a decal.|editdecal <gridId> <uid> <mode>\n<br>Possible modes are:\n<br>- position <x position> <y position>\n<br>- color <color>\n<br>- id <id>\n<br>- rotation <degrees>\n<br>- zindex <zIndex>\n<br>- clean <cleanable><br>|
 |adddecal|Creates a decal on the map|adddecal <id> <x position> <y position> <gridId> [angle=<angle> zIndex=<zIndex> color=<color>]|
 |rmdecal|removes a decal|rmdecal <uid> <gridId>|
 |godmode|Makes your entity or another invulnerable to almost anything. May have irreversible changes.|Usage: godmode / godmode <entityUid>|
 |damage|Add or remove damage to an entity.|Usage: damage <type/group> <amount> [ignoreResistances] [uid]|
 |crewmanifest|Opens the crew manifest for the given station.|Usage: crewmanifest <entity uid>|
-|fixrotations|Sets the rotation of all occluders, low walls and windows to south.|Usage: fixrotations <gridId> | fixrotations|
+|fixrotations|Sets the rotation of all occluders, low walls and windows to south.|Usage: fixrotations <gridId> \| fixrotations|
 |tilereplace|Replaces one tile with another.|Usage: tilereplace [<gridId>] <src> <dst>|
-|tilewalls|Puts an underplating tile below every wall on a grid.|Usage: tilewalls <gridId> | tilewalls|
-|tilewindows|Puts a reinforced plating tile below every window on a grid.|Usage: tilewindows <gridId> | tilewindows|
+|tilewalls|Puts an underplating tile below every wall on a grid.|Usage: tilewalls <gridId> \| tilewalls|
+|tilewindows|Puts a reinforced plating tile below every window on a grid.|Usage: tilewindows <gridId> \| tilewindows|
 |grant_connect_bypass|Temporarily allow a user to bypass regular connection checks.|Usage: grant_connect_bypass <user> [duration minutes]<br>Temporarily grants a user the ability to bypass regular connections restrictions.<br>The bypass only applies to this game server and will expire after (by default) 1 hour.<br>They will be able to join regardless of whitelist, panic bunker, or player cap.|
 |blacklistadd|Adds the player with the given username to the server blacklist.|Usage: blacklistadd <username>|
 |blacklistremove|Removes the player with the given username from the server blacklist.|Usage: blacklistremove <username>|
@@ -299,8 +299,8 @@
 |suicide|Commits suicide|The suicide command gives you a quick way out of a round while remaining in-character.<br>The method varies, first it will attempt to use the held item in your active hand.<br>If that fails, it will attempt to use an object in the environment.<br>Finally, if neither of the above worked, you will die by biting your tongue.|
 |tsay|Send chat messages to the telepathic.|tsay <text>|
 |whisper|Send chat messages to the local channel as a whisper|whisper <text>|
-|loadcharacter|Applies your currently selected character to an entity|Usage: loadcharacter | loadcharacter <entityUid> | loadcharacter <entityUid> <characterName>|
-|spawncharacter|Spawns your currently selected/specified character|Usage: spawncharacter | spawncharacter <characterName>|
+|loadcharacter|Applies your currently selected character to an entity|Usage: loadcharacter \| loadcharacter <entityUid> \| loadcharacter <entityUid> <characterName>|
+|spawncharacter|Spawns your currently selected/specified character|Usage: spawncharacter \| spawncharacter <characterName>|
 |changestocksprice|Changes a company's stock price to the specified number.|changestockprice <Company index> <New price> [Station UID]|
 |addstockscompany|Adds a new company to the stocks market.|addstockscompany <Display name> <Base price> [Station UID]|
 |addhand|Adds a hand to your entity.|Usage: addhand <entityUid> <handPrototypeId> / addhand <entityUid> / addhand <handPrototypeId> / addhand|
@@ -384,18 +384,17 @@
 |playtime_unlock|Unlock the playtime requirement for specific jobs.|Usage: playtime_unlock [user name] [trackers...]<br>This command unlocks the playtime requirements for specific jobs for a user.|
 |promotehost|Grants client temporary full host admin privileges. Use this to bootstrap admins.|Usage promotehost <player>|
 |readmin|Re-admins you if you previously de-adminned.|Usage: readmin|
-|readyall|Readies up all players in the lobby, except for observers.|readyall | ̣readyall <ready>|
+|readyall|Readies up all players in the lobby, except for observers.|readyall \| ̣readyall <ready>|
 |rmbodypart|Removes a given entity from it's containing body, if any.|Usage: rmbodypart <uid>|
 |rmstorage|Removes a given entity from it's containing storage, if any.|Usage: rmstorage <uid>|
-|removeextracomponents|Removes all components from all entities of the specified id if that component is not in its prototype.
-If no id is specified, it matches all entities.|removeextracomponents <entityId> / removeextracomponents|
+|removeextracomponents|Removes all components from all entities of the specified id if that component is not in its prototype.<br>If no id is specified, it matches all entities.|removeextracomponents <entityId> / removeextracomponents|
 |rmmechanism|Removes a given entity from it's containing bodypart, if any.|Usage: rmmechanism <uid>|
 |roleban|Bans a player from a role|Usage: roleban <name or user ID> <job> <reason> [duration in minutes, leave out or 0 for permanent ban]|
 |rolebanlist|Lists the user's role bans|Usage: <name or user ID> [include unbanned]|
 |roleunban|Pardons a player's role ban|Usage: roleunban <role ban id>|
 |setadminooc|Sets the color of your OOC messages. Color must be in hex format, example: setadminooc #c43b23|Usage: setadminooc <color>|
 |setmind|Transfers a mind to the specified entity. The entity must have a MindContainerComponent. By default this will force minds that are currently visiting other entities to return (i.e., return a ghost to their main body).|Usage: setmind <entityUid> <username> [unvisit]|
-|setoutfit|Sets the outfit of the specified entity. The entity must have an InventoryComponent|Usage: setoutfit <entityUid> | setoutfit <entityUid> <outfitId>|
+|setoutfit|Sets the outfit of the specified entity. The entity must have an InventoryComponent|Usage: setoutfit <entityUid> \| setoutfit <entityUid> <outfitId>|
 |setsolutioncapacity|Set the capacity (maximum volume) of some solution.|Usage: setsolutioncapacity <target> <solution> <new capacity>|
 |setsolutiontemperature|Set the temperature of some solution.|Usage: setsolutiontemperature <target> <solution> <new temperature>|
 |setsolutionthermalenergy|Set the thermal energy of some solution.|Usage: setsolutionthermalenergy <target> <solution> <new thermal energy>|
@@ -412,7 +411,7 @@ If no id is specified, it matches all entities.|removeextracomponents <entityId>
 |getartifactmaxvalue|Reports the maximum research point value for a given artifact|forceartifacteffect <uid>|
 |applyworldgenconfig|Applies the given worldgen configuration to a map, setting it up for chunk loading/etc.|applyworldgenconfig <mapid> <prototype>|
 |weather|Sets the weather for the current map.|weather <mapId> <prototype / null>|
-|tippy|Broadcast a message as Tippy the clown.|tippy <user | all> <message> [entity prototype] [speak time] [slide time] [waddle interval]|
+|tippy|Broadcast a message as Tippy the clown.|tippy <user \| all> <message> [entity prototype] [speak time] [slide time] [waddle interval]|
 |tip|Spawn a random game tip.|tip|
 |addcurrency|Adds currency to the specified store|addcurrency <uid> <currency prototype> <amount>|
 |arrivals|||
@@ -438,272 +437,257 @@ If no id is specified, it matches all entities.|removeextracomponents <entityId>
 |lsmap|Lists maps.|lsmap|
 |lsgrid|Lists grids.|lsgrid|
 |tp|Teleports a player to any location in the round.|tp <x> <y> [<mapID>]|
-|tpto|Teleports the current player or the specified players/entities to the location of the first player/entity.|tpto <username|uid> [username|NetEntity]...|
+|tpto|Teleports the current player or the specified players/entities to the location of the first player/entity.|tpto <username\|uid> [username\|NetEntity]...|
 |tpgrid|Teleports a grid to a new location.|tpgrid <gridId> <X> <Y> [<MapId>]|
-|cd|Changes the session's current directory to the given relative or absolute path.|Usage:<br>  cd <path (ResPath)>|
-|ls:here|Lists the contents of the current directory.|Usage:<br>  ls:here -> IEnumerable<ResPath>|
-|ls:in|Lists the contents of the given relative or absolute path.|Usage:<br>  ls:in <in (ResPath)> -> IEnumerable<ResPath>|
-|i|Integer constant.|Usage:<br>  i <value (Int32)> -> Int32|
-|f|Float constant.|Usage:<br>  f <value (Single)> -> Single|
-|s|String constant.|Usage:<br>  s <value (String)> -> String|
-|b|Bool constant.|Usage:<br>  b <value (Boolean)> -> Boolean|
-|ent|Returns the provided entity ID.|Usage:<br>  ent <uid (EntityUid)> -> EntityUid|
-|val|Casts the given value, block, or variable to the given type. This is mostly a workaround for current limitations of variables.|Usage:<br>  val <value (T)> -> T|
-|var|Returns the contents of the given variable. This will attempt to automatically infer a variables type. Compound commands that modify a variable may need to use the 'val' command instead.|Usage:<br>  var <var (VarRef<T>)> -> T|
-|methods:get|Returns all methods associated with the input type.|Usage:<br>  <types (IEnumerable<Type>)> -> methods:get -> IEnumerable<MethodInfo>|
-|methods:overrides|Returns all methods overridden on the input type.|Usage:<br>  <types (IEnumerable<Type>)> -> methods:overrides -> IEnumerable<MethodInfo>|
-|methods:overridesfrom|Returns all methods overridden from the given type on the input type.|Usage:<br>  <types (IEnumerable<Type>)> -> methods:overridesfrom <t (Type)> -> IEnumerable<MethodInfo>|
-|self|Returns the current attached entity.|Usage:<br>  self -> EntityUid|
-|buildinfo|Provides information about the build of the game.|Usage:<br>  buildinfo|
-|cmd:list|Returns a list of all commands, for this side.|Usage:<br>  cmd:list -> IEnumerable<CommandSpec>|
-|cmd:moo|Asks the important questions.|Usage:<br>  cmd:moo -> String|
-|cmd:descloc|Returns the localization string for a command's description.|Usage:<br>  <cmd (CommandSpec)> -> cmd:descloc -> String|
-|cmd:info|Returns a CommandSpec for the given command.
-On its own, this means it'll print the command's help message.|Usage:<br>  cmd:info <cmd (CommandSpec)> -> CommandSpec|
-|cmd:getshim|Returns a command's execution shim.|Usage:<br>  cmd:getshim <block (Block)> -> MethodInfo|
-|explain|Explains the given expression, providing command descriptions and signatures. This only works for valid expressions, it can't explain commands that it fails to parse.|Usage:<br>  explain <expr (CommandRun)>|
-|ioc:registered|Returns all the types registered with IoCManager on the current thread (usually the game thread)|Usage:<br>  ioc:registered -> IEnumerable<Type>|
-|ioc:get|Gets an instance of an IoC registration.|Usage:<br>  <t (Type)> -> ioc:get -> Object|
-|loc:tryloc|Tries to get a localization string, returning null if unable.|Usage:<br>  <str (String)> -> loc:tryloc -> String|
-|loc:loc|Gets a localization string, returning the unlocalized string if unable.|Usage:<br>  <str (String)> -> loc:loc -> String|
-|more|Prints the contents of $more, i.e. any extras that Toolshed didn't print from the last command.|Usage:<br>  more -> Object|
-|physics:velocity|Returns the velocity of the input entities.|Usage:<br>  <input (IEnumerable<EntityUid>)> -> physics:velocity -> IEnumerable<Single>|
-|physics:parent|Returns the parent(s) of the input entities.|Usage:<br>  <input (IEnumerable<EntityUid>)> -> physics:parent -> IEnumerable<EntityUid>|
-|physics:angular_velocity|Returns the angular velocity of the given entities.|Usage:<br>  <input (IEnumerable<EntityUid>)> -> physics:angular_velocity -> IEnumerable<Single>|
-|search|Searches through the input for the provided value.|Usage:<br>  <input (IEnumerable<T>)> -> search <term (String)> -> IEnumerable<FormattedMessage>|
-|stopwatch|Measures the execution time of the given expression.|Usage:<br>  stopwatch <expr (CommandRun)> -> Object|
-|types:consumers|Provides all commands that can consume the given type.|Usage:<br>  <input (Object)> -> types:consumers|
-|types:tree|Debug tool to return all types the command interpreter can downcast the input to.|Usage:<br>  <input (Object)> -> types:tree -> IEnumerable<Type>|
-|types:gettype|Returns the type of the input.|Usage:<br>  <input (Object)> -> types:gettype -> Type|
-|types:fullname|Returns the full name of the input type according to CoreCLR.|Usage:<br>  <input (Type)> -> types:fullname -> String|
-|+|Performs numeric addition.|Usage:<br>  <x (T)> -> + <y (T)> -> T<br>  <x (IEnumerable<T>)> -> + <y (IEnumerable<T>)> -> IEnumerable<T><br>  <x (Vector2)> -> + <y (Vector2)> -> Vector2<br>  <x (IEnumerable<Vector2>)> -> + <y (IEnumerable<Vector2>)> -> IEnumerable<Vector2>|
-|+/|Adds a scalar (single value) to every element in the input.|Usage:<br>  <x (IEnumerable<T>)> -> +/ <y (T)> -> IEnumerable<T><br>  <x (IEnumerable<Vector2>)> -> +/ <y (Vector2)> -> IEnumerable<Vector2>|
-|-|Performs numeric subtraction.|Usage:<br>  <x (T)> -> - <y (T)> -> T<br>  <x (IEnumerable<T>)> -> - <y (IEnumerable<T>)> -> IEnumerable<T><br>  <x (Vector2)> -> - <y (Vector2)> -> Vector2<br>  <x (IEnumerable<Vector2>)> -> - <y (IEnumerable<Vector2>)> -> IEnumerable<Vector2>|
-|-/|Subtracts a scalar (single value) from every element in the input.|Usage:<br>  <x (IEnumerable<T>)> -> -/ <y (T)> -> IEnumerable<T><br>  <x (IEnumerable<Vector2>)> -> -/ <y (Vector2)> -> IEnumerable<Vector2>|
-|*|Performs numeric multiplication.|Usage:<br>  <x (T)> -> * <y (T)> -> T<br>  <x (IEnumerable<T>)> -> * <y (IEnumerable<T>)> -> IEnumerable<T><br>  <x (Vector2)> -> * <y (Vector2)> -> Vector2<br>  <x (IEnumerable<Vector2>)> -> * <y (IEnumerable<Vector2>)> -> IEnumerable<Vector2>|
-|*/|Multiplies a scalar (single value) by every element in the input.|Usage:<br>  <x (IEnumerable<T>)> -> */ <y (T)> -> IEnumerable<T><br>  <x (IEnumerable<Vector2>)> -> */ <y (Vector2)> -> IEnumerable<Vector2>|
-|/|Performs numeric division.|Usage:<br>  <x (T)> -> / <y (T)> -> T<br>  <x (IEnumerable<T>)> -> / <y (IEnumerable<T>)> -> IEnumerable<T>|
-|//|Divides every element in the input by a scalar (single value).|Usage:<br>  <x (IEnumerable<T>)> -> // <y (T)> -> IEnumerable<T>|
-|%|Computes the modulus of two values.
-This is usually remainder, check C#'s documentation for the type.|Usage:<br>  <x (T)> -> % <y (T)> -> T<br>  <x (IEnumerable<T>)> -> % <y (IEnumerable<T>)> -> IEnumerable<T>|
-|%/|Performs the modulus operation over the input with the given constant right-hand value.|Usage:<br>  <x (IEnumerable<T>)> -> %/ <y (T)> -> IEnumerable<T>|
-|min|Returns the minimum of two values.|Usage:<br>  <x (T)> -> min <y (T)> -> T<br>  <x (IEnumerable<T>)> -> min <y (IEnumerable<T>)> -> IEnumerable<T>|
-|max|Returns the maximum of two values.|Usage:<br>  <x (T)> -> max <y (T)> -> T<br>  <x (IEnumerable<T>)> -> max <y (IEnumerable<T>)> -> IEnumerable<T>|
-|&|Performs bitwise AND.|Usage:<br>  <x (T)> -> & <y (T)> -> T<br>  <x (IEnumerable<T>)> -> & <y (IEnumerable<T>)> -> IEnumerable<T>|
-|&~|Performs bitwise AND-NOT over the input.|Usage:<br>  <x (T)> -> &~ <y (T)> -> T<br>  <x (IEnumerable<T>)> -> &~ <y (IEnumerable<T>)> -> IEnumerable<T>|
-|||Performs bitwise OR.|Usage:<br>  <x (T)> -> | <y (T)> -> T<br>  <x (IEnumerable<T>)> -> | <y (IEnumerable<T>)> -> IEnumerable<T>|
-||~|Performs bitwise OR-NOT over the input.|Usage:<br>  <x (T)> -> |~ <y (T)> -> T<br>  <x (IEnumerable<T>)> -> |~ <y (IEnumerable<T>)> -> IEnumerable<T>|
-|^|Performs bitwise XOR.|Usage:<br>  <x (T)> -> ^ <y (T)> -> T<br>  <x (IEnumerable<T>)> -> ^ <y (IEnumerable<T>)> -> IEnumerable<T>|
-|^~|Performs bitwise XNOR over the input.|Usage:<br>  <x (T)> -> ^~ <y (T)> -> T<br>  <x (IEnumerable<T>)> -> ^~ <y (IEnumerable<T>)> -> IEnumerable<T>|
-|~|Performs bitwise NOT on the input.|Usage:<br>  <x (T)> -> ~ -> T<br>  <x (IEnumerable<T>)> -> ~ -> IEnumerable<T>|
-|neg|Negates the input.|Usage:<br>  <x (T)> -> neg -> T<br>  <x (IEnumerable<T>)> -> neg -> IEnumerable<T>|
-|abs|Computes the absolute value of the input (removing the sign)|Usage:<br>  <x (T)> -> abs -> T<br>  <x (IEnumerable<T>)> -> abs -> IEnumerable<T>|
-|average|Computes the average (arithmetic mean) of the input.|Usage:<br>  <input (IEnumerable<T>)> -> average -> T|
-|bibytecount|Returns the size of the input in bytes, given that the input implements IBinaryInteger.
-This is NOT sizeof.|Usage:<br>  <x (T)> -> bibytecount -> Int32<br>  <x (IEnumerable<T>)> -> bibytecount -> IEnumerable<Int32>|
-|shortestbitlength|Returns the minimum number of bits needed to represent the input value.|Usage:<br>  <x (T)> -> shortestbitlength -> Int32<br>  <x (IEnumerable<T>)> -> shortestbitlength -> IEnumerable<Int32>|
-|countleadzeros|Counts the number of leading binary zeros in the input value.|Usage:<br>  <x (T)> -> countleadzeros -> T<br>  <x (IEnumerable<T>)> -> countleadzeros -> IEnumerable<T>|
-|counttrailingzeros|Counts the number of trailing binary zeros in the input value.|Usage:<br>  <x (T)> -> counttrailingzeros -> T<br>  <x (IEnumerable<T>)> -> counttrailingzeros -> IEnumerable<T>|
-|<|Performs a less-than comparison, x < y.|Usage:<br>  <x (T)> -> < <y (T)> -> Boolean|
-|>=|Performs a greater-than-or-equal comparison, x >= y.|Usage:<br>  <x (T)> -> >= <y (T)> -> Boolean|
-|<=|Performs a less-than-or-equal comparison, x <= y.|Usage:<br>  <x (T)> -> <= <y (T)> -> Boolean|
-|==|Performs an equality comparison, returning true if the inputs are equal.|Usage:<br>  <x (T)> -> == <y (T)> -> Boolean|
-|!=|Performs an equality comparison, returning true if the inputs are not equal.|Usage:<br>  <x (T)> -> != <y (T)> -> Boolean|
-|fpi|pi (3.14159...) as a float.|Usage:<br>  fpi -> Single|
-|fe|e (2.71828...) as a float.|Usage:<br>  fe -> Single|
-|ftau|tau (6.28318...) as a float.|Usage:<br>  ftau -> Single|
-|fepsilon|The epsilon value for a float, exactly 1.4e-45.|Usage:<br>  fepsilon -> Single|
-|dpi|pi (3.14159...) as a double.|Usage:<br>  dpi -> Double|
-|de|e (2.71828...) as a double.|Usage:<br>  de -> Double|
-|dtau|tau (6.28318...) as a double.|Usage:<br>  dtau -> Double|
-|depsilon|The epsilon value for a double, exactly 4.9406564584124654E-324.|Usage:<br>  depsilon -> Double|
-|hpi|pi (3.14...) as a half.|Usage:<br>  hpi -> Half|
-|he|e (2.71...) as a half.|Usage:<br>  he -> Half|
-|htau|tau (6.28...) as a half.|Usage:<br>  htau -> Half|
-|hepsilon|The epsilon value for a half, exactly 5.9604645E-08.|Usage:<br>  hepsilon -> Half|
-|floor|Returns the floor of the input value (rounding toward zero).|Usage:<br>  <x (T)> -> floor -> T<br>  <x (IEnumerable<T>)> -> floor -> IEnumerable<T>|
-|ceil|Returns the ceil of the input value (rounding away from zero).|Usage:<br>  <x (T)> -> ceil -> T<br>  <x (IEnumerable<T>)> -> ceil -> IEnumerable<T>|
-|round|Rounds the input value.|Usage:<br>  <x (T)> -> round -> T<br>  <x (IEnumerable<T>)> -> round -> IEnumerable<T>|
-|trunc|Truncates the input value.|Usage:<br>  <x (T)> -> trunc -> T<br>  <x (IEnumerable<T>)> -> trunc -> IEnumerable<T>|
-|round2frac|Rounds the input value to the specified number of fractional digits.|Usage:<br>  <x (T)> -> round2frac <frac (Int32)> -> T<br>  <x (IEnumerable<T>)> -> round2frac <frac (Int32)> -> IEnumerable<T>|
-|exponentbytecount|Returns the number of bytes required to store the exponent.|Usage:<br>  <x (T)> -> exponentbytecount -> Int32<br>  <x (IEnumerable<T>)> -> exponentbytecount -> IEnumerable<Int32>|
-|significandbytecount|Returns the number of bytes required to store the significand.|Usage:<br>  <x (T)> -> significandbytecount -> Int32<br>  <x (IEnumerable<T>)> -> significandbytecount -> IEnumerable<Int32>|
-|significandbitcount|Returns the exact bit length of the significand.|Usage:<br>  <x (T)> -> significandbitcount -> Int32<br>  <x (IEnumerable<T>)> -> significandbitcount -> IEnumerable<Int32>|
-|exponentshortestbitcount|Returns the minimum number of bits to store the exponent.|Usage:<br>  <x (T)> -> exponentshortestbitcount -> Int32<br>  <x (IEnumerable<T>)> -> exponentshortestbitcount -> IEnumerable<Int32>|
-|stepnext|Steps to the next float value, adding one to the significand with carry.|Usage:<br>  <x (T)> -> stepnext -> T<br>  <x (IEnumerable<T>)> -> stepnext -> IEnumerable<T>|
-|stepprev|Steps to the previous float value, subtracting one from the significand with carry.|Usage:<br>  <x (T)> -> stepprev -> T<br>  <x (IEnumerable<T>)> -> stepprev -> IEnumerable<T>|
-|join|Joins two sequences together into one sequence.|Usage:<br>  <x (String)> -> join <y (String)> -> String<br>  <x (IEnumerable<T>)> -> join <y (IEnumerable<T>)> -> IEnumerable<T>|
-|append|Appends a value to the input enumerable.|Usage:<br>  <x (IEnumerable<T>)> -> append <y (T)> -> IEnumerable<T>|
-|?|Replaces the input with the type's default value if it is null, albeit only for value types (not objects).|Usage:<br>  <value (Nullable<TIn>)> -> ? <follower (Block<TIn,TOut>)> -> TOut|
-|or?|If the input is null, uses the provided alternate value.|Usage:<br>  <value (T)> -> or? <alternate (ValueRef<T>)> -> T<br>  <value (Nullable<T>)> -> or? <alternate (ValueRef<T>)> -> T|
-|??|Prints the given value transparently, for debug prints in a command run.|Usage:<br>  <value (T)> -> ?? -> T<br>  <value (IEnumerable<T>)> -> ?? -> IEnumerable<T>|
-|checkedto|Converts from the input numeric type to the target, erroring if not possible.|Usage:<br>  <x (T)> -> checkedto -> TOut<br>  <x (IEnumerable<T>)> -> checkedto -> IEnumerable<TOut>|
-|saturateto|Converts from the input numeric type to the target, saturating if the value is out of range.
-For example, converting 382 to a byte would saturate to 255 (the maximum value of a byte).|Usage:<br>  <x (T)> -> saturateto -> TOut<br>  <x (IEnumerable<T>)> -> saturateto -> IEnumerable<TOut>|
-|truncto|Converts from the input numeric type to the target, with truncation.
-In the case of integers, this is a bit cast with sign extension.|Usage:<br>  <x (T)> -> truncto -> TOut<br>  <x (IEnumerable<T>)> -> truncto -> IEnumerable<TOut>|
-|iscanonical|Returns whether the input is in canonical form.|Usage:<br>  <x (T)> -> iscanonical -> Boolean<br>  <x (IEnumerable<T>)> -> iscanonical -> IEnumerable<Boolean>|
-|iscomplex|Returns whether the input is a complex number (by value, not by type)|Usage:<br>  <x (T)> -> iscomplex -> Boolean<br>  <x (IEnumerable<T>)> -> iscomplex -> IEnumerable<Boolean>|
-|iseven|Returns whether the input is even.
-Not a javascript package.|Usage:<br>  <x (T)> -> iseven -> Boolean<br>  <x (IEnumerable<T>)> -> iseven -> IEnumerable<Boolean>|
-|isodd|Returns whether the input is odd.|Usage:<br>  <x (T)> -> isodd -> Boolean<br>  <x (IEnumerable<T>)> -> isodd -> IEnumerable<Boolean>|
-|isfinite|Returns whether the input is finite.|Usage:<br>  <x (T)> -> isfinite -> Boolean<br>  <x (IEnumerable<T>)> -> isfinite -> IEnumerable<Boolean>|
-|isimaginary|Returns whether the input is purely imaginary (no real part).|Usage:<br>  <x (T)> -> isimaginary -> Boolean<br>  <x (IEnumerable<T>)> -> isimaginary -> IEnumerable<Boolean><br>  <x (ICommonSession)> -> isimaginary -> Boolean|
-|isinfinite|Returns whether the input is infinite.|Usage:<br>  <x (T)> -> isinfinite -> Boolean<br>  <x (IEnumerable<T>)> -> isinfinite -> IEnumerable<Boolean>|
-|isinteger|Returns whether the input is an integer (by value, not by type)|Usage:<br>  <x (T)> -> isinteger -> Boolean<br>  <x (IEnumerable<T>)> -> isinteger -> IEnumerable<Boolean>|
-|isnan|Returns whether the input is Not a Number (NaN).
-This is a special floating point value, so this is by value, not by type.|Usage:<br>  <x (T)> -> isnan -> Boolean<br>  <x (IEnumerable<T>)> -> isnan -> IEnumerable<Boolean>|
-|isnegative|Returns whether the input is negative.|Usage:<br>  <x (T)> -> isnegative -> Boolean<br>  <x (IEnumerable<T>)> -> isnegative -> IEnumerable<Boolean>|
-|ispositive|Returns whether the input is positive.|Usage:<br>  <x (T)> -> ispositive -> Boolean<br>  <x (IEnumerable<T>)> -> ispositive -> IEnumerable<Boolean>|
-|isreal|Returns whether the input is purely real (no imaginary part).|Usage:<br>  <x (T)> -> isreal -> Boolean<br>  <x (IEnumerable<T>)> -> isreal -> IEnumerable<Boolean><br>  <x (ICommonSession)> -> isreal -> Boolean|
-|issubnormal|Returns whether the input is in sub-normal form.|Usage:<br>  <x (T)> -> issubnormal -> Boolean<br>  <x (IEnumerable<T>)> -> issubnormal -> IEnumerable<Boolean>|
-|iszero|Returns whether the input is zero.|Usage:<br>  <x (T)> -> iszero -> Boolean<br>  <x (IEnumerable<T>)> -> iszero -> IEnumerable<Boolean>|
-|pow|Computes the power of its lefthand to its righthand. x^y.|Usage:<br>  <x (T)> -> pow <y (T)> -> T<br>  <x (IEnumerable<T>)> -> pow <y (IEnumerable<T>)> -> IEnumerable<T>|
-|rng:to|Returns a number between the input (inclusive) and the argument (exclusive).|Usage:<br>  <from (Int32)> -> rng:to <to (Int32)> -> Int32<br>  <from (Single)> -> rng:to <to (Single)> -> Single|
-|rng:from|Returns a number between the argument (inclusive) and the input (exclusive))|Usage:<br>  <to (Int32)> -> rng:from <from (Int32)> -> Int32<br>  <to (Single)> -> rng:from <from (Single)> -> Single|
-|rng:prob|Returns a boolean based on the input probability/chance (from 0 to 1)|Usage:<br>  <prob (Single)> -> rng:prob -> Boolean|
-|sqrt|Computes the square root of its input.|Usage:<br>  <x (T)> -> sqrt -> T<br>  <x (IEnumerable<T>)> -> sqrt -> IEnumerable<T>|
-|cbrt|Computes the cube root of its input.|Usage:<br>  <x (T)> -> cbrt -> T<br>  <x (IEnumerable<T>)> -> cbrt -> IEnumerable<T>|
-|root|Computes the Nth root of its input.|Usage:<br>  <x (T)> -> root <y (Int32)> -> T<br>  <x (IEnumerable<T>)> -> root <y (IEnumerable<Int32>)> -> IEnumerable<T>|
-|hypot|Computes the hypotenuse of a triangle with the given sides A and B.|Usage:<br>  <x (T)> -> hypot <y (T)> -> T<br>  <x (IEnumerable<T>)> -> hypot <y (IEnumerable<T>)> -> IEnumerable<T>|
-|sum|Computes the sum of the input.|Usage:<br>  <input (IEnumerable<T>)> -> sum -> T|
-|sin|Computes the sine of the input.|Usage:<br>  <x (T)> -> sin -> T<br>  <x (IEnumerable<T>)> -> sin -> IEnumerable<T>|
-|sinpi|Computes the sine of the input multiplied by pi.|Usage:<br>  <x (T)> -> sinpi -> T<br>  <x (IEnumerable<T>)> -> sinpi -> IEnumerable<T>|
-|asin|Computes the arcsine of the input.|Usage:<br>  <x (T)> -> asin -> T<br>  <x (IEnumerable<T>)> -> asin -> IEnumerable<T>|
-|asinpi|Computes the arcsine of the input multiplied by pi.|Usage:<br>  <x (T)> -> asinpi -> T<br>  <x (IEnumerable<T>)> -> asinpi -> IEnumerable<T>|
-|cos|Computes the cosine of the input.|Usage:<br>  <x (T)> -> cos -> T<br>  <x (IEnumerable<T>)> -> cos -> IEnumerable<T>|
-|cospi|Computes the cosine of the input multiplied by pi.|Usage:<br>  <x (T)> -> cospi -> T<br>  <x (IEnumerable<T>)> -> cospi -> IEnumerable<T>|
-|acos|Computes the arcosine of the input.|Usage:<br>  <x (T)> -> acos -> T<br>  <x (IEnumerable<T>)> -> acos -> IEnumerable<T>|
-|acospi|Computes the arcosine of the input multiplied by pi.|Usage:<br>  <x (T)> -> acospi -> T<br>  <x (IEnumerable<T>)> -> acospi -> IEnumerable<T>|
-|tan|Computes the tangent of the input.|Usage:<br>  <x (T)> -> tan -> T<br>  <x (IEnumerable<T>)> -> tan -> IEnumerable<T>|
-|tanpi|Computes the tangent of the input multiplied by pi.|Usage:<br>  <x (T)> -> tanpi -> T<br>  <x (IEnumerable<T>)> -> tanpi -> IEnumerable<T>|
-|atan|Computes the arctangent of the input.|Usage:<br>  <x (T)> -> atan -> T<br>  <x (IEnumerable<T>)> -> atan -> IEnumerable<T>|
-|atanpi|Computes the arctangent of the input multiplied by pi.|Usage:<br>  <x (T)> -> atanpi -> T<br>  <x (IEnumerable<T>)> -> atanpi -> IEnumerable<T>|
-|any|Returns true if there's any values in the input, otherwise false.|Usage:<br>  <input (IEnumerable<T>)> -> any -> Boolean|
-|as|Casts the input to the given type.
-Effectively a type hint if you know the type but the interpreter does not.|Usage:<br>  <value (TIn)> -> as -> TOut|
-|contains|Returns whether the input enumerable contains the specified value.|The behaviour of this command can be inverted using the "not" prefix.<br>Usage:<br>  <input (IEnumerable<T>)> -> [not] contains <value (T)> -> Boolean|
-|count|Counts the amount of entries in it's input, returning an integer.|Usage:<br>  <enumerable (IEnumerable<T>)> -> count -> Int32|
-|emplace|Runs the given block over it's inputs, with the input value placed into the variable $value within the block.
-Additionally breaks out $wx, $wy, $proto, $desc, $name, and $paused for entities.
-Can also have breakout values for other types, consult the documentation for that type for further info.|Usage:<br>  <value (TIn)> -> emplace <block (Block)> -> TOut<br>  <value (IEnumerable<TIn>)> -> emplace <block (Block)> -> IEnumerable<TOut>|
-|first|Returns the first entry of the given enumerable.|Usage:<br>  <input (IEnumerable<T>)> -> first -> T|
-|isempty|Returns true if the input is empty, otherwise false.|The behaviour of this command can be inverted using the "not" prefix.<br>Usage:<br>  <input (T)> -> [not] isempty -> Boolean|
-|isnull|Returns true if the input is null, otherwise false.|The behaviour of this command can be inverted using the "not" prefix.<br>Usage:<br>  <input (Object)> -> [not] isnull -> Boolean|
-|iterate|Iterates the given function over the input N times, returning a list of results.
-Think of this like successively applying the function to a value, tracking all the intermediate values.|Usage:<br>  <value (T)> -> iterate <block (Block<T,T>)> <times (Int32)> -> IEnumerable<T>|
-|map|Maps the input over the given block, with the provided expected return type.
-This command may be modified to not need an explicit return type in the future.|Usage:<br>  <value (IEnumerable<TIn>)> -> map <block (Block<TIn,TOut>)> -> IEnumerable<TOut>|
-|pick|Picks a random value from the input.|Usage:<br>  <input (IEnumerable<T>)> -> pick -> T|
-|reduce|Given a block to use as a reducer, turns a sequence into a single value.
-The left hand side of the block is implied, and the right hand is stored in $value.|Usage:<br>  <input (IEnumerable<T>)> -> reduce <reducer (Block)> -> T|
-|select|Selects N objects or N% of objects from the input.
-One can additionally invert this command with not to make it select everything except N objects instead.|The behaviour of this command can be inverted using the "not" prefix.<br>Usage:<br>  <enumerable (IEnumerable<TR>)> -> [not] select <quantity (Quantity)> -> IEnumerable<TR>|
-|take|Takes N values from the input sequence|Usage:<br>  <input (IEnumerable<T>)> -> take <amount (Int32)> -> IEnumerable<T>|
-|tee|Tees the input into the given block, ignoring the block's result.
-This essentially lets you have a branch in your code to do multiple operations on one value.|Usage:<br>  <value (IEnumerable<TIn>)> -> tee <block (Block<TIn,TOut>)> -> IEnumerable<TIn>|
-|unique|Filters the input sequence for uniqueness, removing duplicate values.|Usage:<br>  <input (IEnumerable<T>)> -> unique -> IEnumerable<T>|
-|where|Given some input sequence IEnumerable<T>, takes a block of signature T -> bool that decides if each input value should be included in the output sequence.|Usage:<br>  <input (IEnumerable<T>)> -> where <check (Block<T,Boolean>)> -> IEnumerable<T>|
-|=>|Assigns the input to a variable.|Usage:<br>  <input (T)> -> => <var (WriteableVarRef<T>)> -> T<br>  <input (IEnumerable<T>)> -> => <var (WriteableVarRef<List<T>>)> -> List<T>|
-|vars|Provides a list of all variables set in this session.|Usage:<br>  vars|
-|bin|"Bins" the input, counting up how many times each unique element occurs.|Usage:<br>  <input (IEnumerable<T>)> -> bin -> IDictionary<T,Int32>|
-|extremes|Returns the two extreme ends of a list, interwoven.|Usage:<br>  <input (IEnumerable<T>)> -> extremes -> IEnumerable<T>|
-|sortby|Sorts the input least to greatest by the computed key.|Usage:<br>  <input (IEnumerable<T>)> -> sortby <orderer (Block<T,TOrd>)> -> IEnumerable<T>|
-|sort|Sorts the input least to greatest.|Usage:<br>  <input (IEnumerable<T>)> -> sort -> IEnumerable<T>|
-|sortdownby|Sorts the input greatest to least by the computed key.|Usage:<br>  <input (IEnumerable<T>)> -> sortdownby <orderer (Block<T,TOrd>)> -> IEnumerable<T>|
-|sortdown|Sorts the input greatest to least.|Usage:<br>  <input (IEnumerable<T>)> -> sortdown -> IEnumerable<T>|
-|sortmapby|Sorts the input least to greatest by the computed key, replacing the value with it's computed key afterward.|Usage:<br>  <input (IEnumerable<T>)> -> sortmapby <orderer (Block<T,TOrd>)> -> IEnumerable<TOrd>|
-|sortmapdownby|Sorts the input greatest to least by the computed key, replacing the value with it's computed key afterward.|Usage:<br>  <input (IEnumerable<T>)> -> sortmapdownby <orderer (Block<T,TOrd>)> -> IEnumerable<TOrd>|
-|iota|Returns a list of numbers 1 to N.|Usage:<br>  <count (T)> -> iota -> IEnumerable<T>|
-|rep|Repeats the input value N times to form a sequence.|Usage:<br>  <value (T)> -> rep <amount (Int32)> -> IEnumerable<T>|
-|to|Returns a list of numbers N to M.|Usage:<br>  <start (T)> -> to <end (T)> -> IEnumerable<T>|
-|curtick|The current game tick.|Usage:<br>  curtick -> GameTick|
-|curtime|The current game time (a TimeSpan)|Usage:<br>  curtime -> TimeSpan|
-|realtime|The current realtime since startup (a TimeSpan)|Usage:<br>  realtime -> TimeSpan|
-|servertime|The current server game time, or zero if we are the server (a TimeSpan)|Usage:<br>  servertime -> TimeSpan|
-|delete|Deletes the input entities.|Usage:<br>  <entities (IEnumerable<EntityUid>)> -> delete<br>  delete <entity (EntityUid)>|
-|do|Backwards compatibility with BQL, applies the given old commands over the input sequence.|Usage:<br>  <input (IEnumerable<T>)> -> do <command (String)> -> IEnumerable<T>|
-|entities|Returns all entities on the server.|Usage:<br>  entities -> IEnumerable<EntityUid>|
-|named|Filters the input entities by their name, with the regex ^selector$.|The behaviour of this command can be inverted using the "not" prefix.<br>Usage:<br>  <input (IEnumerable<EntityUid>)> -> [not] named <regex (String)> -> IEnumerable<EntityUid>|
-|nearby|Creates a new list of all entities nearby the inputs within the given range.|Usage:<br>  <input (IEnumerable<EntityUid>)> -> nearby <range (Single)> -> IEnumerable<EntityUid>|
-|paused|Filters the input entities by whether or not they are paused.|The behaviour of this command can be inverted using the "not" prefix.<br>Usage:<br>  <entities (IEnumerable<EntityUid>)> -> [not] paused -> IEnumerable<EntityUid>|
-|prototyped|Filters the input entities by their prototype.|The behaviour of this command can be inverted using the "not" prefix.<br>Usage:<br>  <input (IEnumerable<EntityUid>)> -> [not] prototyped <prototype (EntProtoId)> -> IEnumerable<EntityUid>|
-|replace|Replaces the input entities with the given prototype, preserving position and rotation (but nothing else)|Usage:<br>  <input (IEnumerable<EntityUid>)> -> replace <prototype (EntProtoId)> -> IEnumerable<EntityUid>|
-|spawn:at|Spawns an entity at the given coordinates.|Usage:<br>  <target (EntityCoordinates)> -> spawn:at <proto (EntProtoId)> -> EntityUid<br>  <target (IEnumerable<EntityCoordinates>)> -> spawn:at <proto (EntProtoId)> -> IEnumerable<EntityUid>|
-|spawn:on|Spawns an entity on the given entity, at it's coordinates.|Usage:<br>  <target (EntityUid)> -> spawn:on <proto (EntProtoId)> -> EntityUid<br>  <target (IEnumerable<EntityUid>)> -> spawn:on <proto (EntProtoId)> -> IEnumerable<EntityUid>|
-|spawn:attached|Spawns an entity attached to the given entity, at (0 0) relative to it.|Usage:<br>  <target (EntityUid)> -> spawn:attached <proto (EntProtoId)> -> EntityUid<br>  <target (IEnumerable<EntityUid>)> -> spawn:attached <proto (EntProtoId)> -> IEnumerable<EntityUid>|
-|with|Filters the input entities by whether or not they have the given component.|The behaviour of this command can be inverted using the "not" prefix.<br>Usage:<br>  <input (IEnumerable<EntityUid>)> -> [not] with <component (Type)> -> IEnumerable<EntityUid><br>  <input (IEnumerable<EntityPrototype>)> -> [not] with <component (Type)> -> IEnumerable<EntityPrototype><br>  <input (IEnumerable<ProtoId<T>>)> -> [not] with <protoId (ProtoId<T>)> -> IEnumerable<ProtoId<T>>|
-|mappos|Returns an entity's coordinates relative to it's current map.|Usage:<br>  <ent (EntityUid)> -> mappos -> EntityCoordinates<br>  <input (IEnumerable<EntityUid>)> -> mappos -> IEnumerable<EntityCoordinates>|
-|pos|Returns an entity's coordinates.|Usage:<br>  <ent (EntityUid)> -> pos -> EntityCoordinates<br>  <input (IEnumerable<EntityUid>)> -> pos -> IEnumerable<EntityCoordinates><br>  pos -> EntityCoordinates|
-|tp:coords|Teleports the target to the given coordinates.|Usage:<br>  <teleporter (EntityUid)> -> tp:coords <target (EntityCoordinates)> -> EntityUid<br>  <teleporters (IEnumerable<EntityUid>)> -> tp:coords <target (EntityCoordinates)> -> IEnumerable<EntityUid>|
-|tp:to|Teleports the target to the given other entity.|Usage:<br>  <teleporter (EntityUid)> -> tp:to <target (EntityUid)> -> EntityUid<br>  <teleporters (IEnumerable<EntityUid>)> -> tp:to <target (EntityUid)> -> IEnumerable<EntityUid>|
-|tp:into|Teleports the target "into" the given other entity, attaching it at (0 0) relative to it.|Usage:<br>  <teleporter (EntityUid)> -> tp:into <target (EntityUid)> -> EntityUid<br>  <teleporters (IEnumerable<EntityUid>)> -> tp:into <target (EntityUid)> -> IEnumerable<EntityUid>|
-|allcomps|Returns all components on the given entity.|Usage:<br>  <input (EntityUid)> -> allcomps -> IEnumerable<IComponent>|
-|comp:get|Gets the given component from the given entity.|Usage:<br>  <input (IEnumerable<EntityUid>)> -> comp:get -> IEnumerable<T><br>  <input (EntityUid)> -> comp:get -> T|
-|comp:add|Adds the given component to the given entity.|Usage:<br>  <input (EntityUid)> -> comp:add -> EntityUid<br>  <input (IEnumerable<EntityUid>)> -> comp:add -> IEnumerable<EntityUid>|
-|comp:rm|Removes the given component from the entity.|Usage:<br>  <input (EntityUid)> -> comp:rm -> EntityUid<br>  <input (IEnumerable<EntityUid>)> -> comp:rm -> IEnumerable<EntityUid>|
-|comp:ensure|Ensures the given entity has the given component.|Usage:<br>  <input (EntityUid)> -> comp:ensure -> EntityUid<br>  <input (IEnumerable<EntityUid>)> -> comp:ensure -> IEnumerable<EntityUid>|
-|comp:has|Check if the given entity has the given component.|Usage:<br>  <input (EntityUid)> -> comp:has -> Boolean<br>  <input (IEnumerable<EntityUid>)> -> comp:has -> IEnumerable<Boolean>|
-|entitysystemupdateorder:tick|Lists the tick update order of entity systems.|Usage:<br>  entitysystemupdateorder:tick -> IEnumerable<Type>|
-|entitysystemupdateorder:frame|Lists the frame update order of entity systems.|Usage:<br>  entitysystemupdateorder:frame -> IEnumerable<Type>|
-|actor:controlled|Filters entities by whether or not they're actively controlled.|Usage:<br>  <input (IEnumerable<EntityUid>)> -> actor:controlled -> IEnumerable<EntityUid>|
-|actor:session|Returns the sessions associated with the input entities.|Usage:<br>  <input (IEnumerable<EntityUid>)> -> actor:session -> IEnumerable<ICommonSession>|
-|player:list|Returns a list of all player sessions.|Usage:<br>  player:list -> IEnumerable<ICommonSession>|
-|player:self|Returns the current player session.|Usage:<br>  player:self -> ICommonSession|
-|player:imm|Returns the session associated with the player given as argument.|Usage:<br>  player:imm <username (String)> -> ICommonSession|
-|player:entity|Returns the entities of the input sessions.|Usage:<br>  <sessions (IEnumerable<ICommonSession>)> -> player:entity -> IEnumerable<EntityUid><br>  <sessions (ICommonSession)> -> player:entity -> EntityUid<br>  player:entity <username (String)> -> EntityUid|
-|visualize|Takes the input list of entities and puts them into a UI window for easy browsing.|Usage:<br>  <input (IEnumerable<EntityUid>)> -> visualize|
-|runverbas|Runs a verb over the input entities with the given user.|Usage:<br>  <input (IEnumerable<NetEntity>)> -> runverbas <runner (EntityUid)> <verb (String)> -> IEnumerable<NetEntity>|
-|acmd:perms|Returns the admin permissions of the given command, if any.|Usage:<br>  <command (CommandSpec)> -> acmd:perms -> AdminFlags[]|
-|acmd:caninvoke|Check if the given player can invoke the given command.|Usage:<br>  <command (CommandSpec)> -> acmd:caninvoke <player (ICommonSession)> -> Boolean|
-|laws:list|Returns a list of all law bound entities.|Usage:<br>  laws:list -> IEnumerable<EntityUid>|
-|laws:get|Returns all of the laws for a given entity.|Usage:<br>  <lawbound (EntityUid)> -> laws:get -> IEnumerable<String>|
-|polymorph|Polymorphs the input entity with the given prototype.|Usage:<br>  <input (EntityUid)> -> polymorph <protoId (ProtoId<PolymorphPrototype>)> -> Nullable<EntityUid><br>  <input (IEnumerable<EntityUid>)> -> polymorph <protoId (ProtoId<PolymorphPrototype>)> -> IEnumerable<EntityUid>|
-|unpolymorph|Reverts a polymorph.|Usage:<br>  <input (EntityUid)> -> unpolymorph -> Nullable<EntityUid><br>  <input (IEnumerable<EntityUid>)> -> unpolymorph -> IEnumerable<EntityUid>|
-|stationevent:simulate|Simulates N number of rounds in which events will occur and prints the occurrences of every event after.|Usage:<br>  stationevent:simulate <eventScheduler (EntityPrototype)> <rounds (Int32)> <playerCount (Int32)> <roundEndMean (Single)> <roundEndStdDev (Single)> -> IEnumerable<ValueTuple<String,Single>>|
-|stationevent:lsprob|Lists the probability of different station events occuring out of the entire pool.|Usage:<br>  stationevent:lsprob <eventScheduler (EntityPrototype)> -> IEnumerable<ValueTuple<String,Single>>|
-|stationevent:lsprobtime|Lists the probability of different station events occuring based on the specified length of a round.|Usage:<br>  stationevent:lsprobtime <eventScheduler (EntityPrototype)> <time (Single)> -> IEnumerable<ValueTuple<String,Single>>|
-|stationevent:prob|Returns the probability of a single station event occuring out of the entire pool.|Usage:<br>  stationevent:prob <eventScheduler (EntityPrototype)> <eventId (String)> -> Single|
-|mind:get|Grabs the mind from the entity, if any.|Usage:<br>  <session (ICommonSession)> -> mind:get -> MindComponent<br>  <ent (EntityUid)> -> mind:get -> MindComponent|
-|mind:control|Assumes control of an entity with the given player.|Usage:<br>  <target (EntityUid)> -> mind:control <player (ICommonSession)> -> EntityUid|
-|language:add|Adds a new language to the piped entity. The two last arguments indicate whether it should be spoken/understood. Example: 'self language:add "Canilunzt" true true'|Usage:<br>  <input (EntityUid)> -> language:add <language (ProtoId<LanguagePrototype>)> <canSpeak (Boolean)> <canUnderstand (Boolean)> -> EntityUid|
-|language:rm|Removes a language from the piped entity. Works similarly to language:add. Example: 'self language:rm "TauCetiBasic" true true'.|Usage:<br>  <input (EntityUid)> -> language:rm <language (ProtoId<LanguagePrototype>)> <removeSpeak (Boolean)> <removeUnderstand (Boolean)> -> EntityUid|
-|language:lsspoken|Lists all languages the entity can speak. Example: 'self language:lsspoken'|Usage:<br>  <input (EntityUid)> -> language:lsspoken -> IEnumerable<ProtoId<LanguagePrototype>>|
-|language:lsunderstood|Lists all languages the entity can understand. Example: 'self language:lssunderstood'|Usage:<br>  <input (EntityUid)> -> language:lsunderstood -> IEnumerable<ProtoId<LanguagePrototype>>|
-|translator:addlang|Adds a new target language to the piped translator entity. See language:add for details.|Usage:<br>  <input (EntityUid)> -> translator:addlang <language (ProtoId<LanguagePrototype>)> <addSpeak (Boolean)> <addUnderstand (Boolean)> -> EntityUid|
-|translator:rmlang|Removes a target language from the piped translator entity. See language:rm for details.|Usage:<br>  <input (EntityUid)> -> translator:rmlang <language (ProtoId<LanguagePrototype>)> <removeSpeak (Boolean)> <removeUnderstand (Boolean)> -> EntityUid|
-|translator:addrequired|Adds a new required language to the piped translator entity. Example: 'ent 1234 translator:addrequired "TauCetiBasic"'|Usage:<br>  <input (EntityUid)> -> translator:addrequired <language (ProtoId<LanguagePrototype>)> -> EntityUid|
-|translator:rmrequired|Removes a required language from the piped translator entity. Example: 'ent 1234 translator:rmrequired "TauCetiBasic"'|Usage:<br>  <input (EntityUid)> -> translator:rmrequired <language (ProtoId<LanguagePrototype>)> -> EntityUid|
-|translator:lsspoken|Lists all spoken languages for the piped translator entity. Example: 'ent 1234 translator:lsspoken'|Usage:<br>  <input (EntityUid)> -> translator:lsspoken -> IEnumerable<ProtoId<LanguagePrototype>>|
-|translator:lsunderstood|Lists all understood languages for the piped translator entity. Example: 'ent 1234 translator:lssunderstood'|Usage:<br>  <input (EntityUid)> -> translator:lsunderstood -> IEnumerable<ProtoId<LanguagePrototype>>|
-|translator:lsrequired|Lists all required languages for the piped translator entity. Example: 'ent 1234 translator:lsrequired'|Usage:<br>  <input (EntityUid)> -> translator:lsrequired -> IEnumerable<ProtoId<LanguagePrototype>>|
-|jobs:jobs|Returns all jobs on a station.|Usage:<br>  <station (EntityUid)> -> jobs:jobs -> IEnumerable<JobSlotRef><br>  <stations (IEnumerable<EntityUid>)> -> jobs:jobs -> IEnumerable<JobSlotRef>|
-|jobs:job|Returns a given job on a station.|Usage:<br>  <station (EntityUid)> -> jobs:job <job (ProtoId<JobPrototype>)> -> JobSlotRef<br>  <stations (IEnumerable<EntityUid>)> -> jobs:job <job (ProtoId<JobPrototype>)> -> IEnumerable<JobSlotRef>|
-|jobs:isinfinite|Returns true if the input job is infinite, otherwise false.|The behaviour of this command can be inverted using the "not" prefix.<br>Usage:<br>  <job (JobSlotRef)> -> [not] jobs:isinfinite -> Boolean<br>  <jobs (IEnumerable<JobSlotRef>)> -> [not] jobs:isinfinite -> IEnumerable<Boolean>|
-|jobs:adjust|Adjusts the number of slots for the given job.|Usage:<br>  <ref (JobSlotRef)> -> jobs:adjust <by (Int32)> -> JobSlotRef<br>  <ref (IEnumerable<JobSlotRef>)> -> jobs:adjust <by (Int32)> -> IEnumerable<JobSlotRef>|
-|jobs:set|Sets the number of slots for the given job.|Usage:<br>  <ref (JobSlotRef)> -> jobs:set <by (Int32)> -> JobSlotRef<br>  <ref (IEnumerable<JobSlotRef>)> -> jobs:set <by (Int32)> -> IEnumerable<JobSlotRef>|
-|jobs:amount|Returns the number of slots for the given job.|Usage:<br>  <ref (JobSlotRef)> -> jobs:amount -> UInt32<br>  <ref (IEnumerable<JobSlotRef>)> -> jobs:amount -> IEnumerable<UInt32>|
-|stations:list|Returns a list of all stations.|Usage:<br>  stations:list -> IEnumerable<EntityUid>|
-|stations:get|Gets the active station, if and only if there is only one.|Usage:<br>  stations:get -> EntityUid|
-|stations:getowningstation|Gets the station that a given entity is "owned by" (within)|Usage:<br>  <input (IEnumerable<EntityUid>)> -> stations:getowningstation -> IEnumerable<Nullable<EntityUid>><br>  <input (EntityUid)> -> stations:getowningstation -> Nullable<EntityUid>|
-|stations:largestgrid|Returns the largest grid the given station has, if any.|Usage:<br>  <input (EntityUid)> -> stations:largestgrid -> Nullable<EntityUid><br>  <input (IEnumerable<EntityUid>)> -> stations:largestgrid -> IEnumerable<Nullable<EntityUid>>|
-|stations:grids|Returns all grids associated with the input station.|Usage:<br>  <input (EntityUid)> -> stations:grids -> IEnumerable<EntityUid><br>  <input (IEnumerable<EntityUid>)> -> stations:grids -> IEnumerable<EntityUid>|
-|stations:config|Returns the config associated with the input station, if any.|Usage:<br>  <input (EntityUid)> -> stations:config -> StationConfig<br>  <input (IEnumerable<EntityUid>)> -> stations:config -> IEnumerable<StationConfig>|
-|stations:addgrid|Adds a grid to the given station.|Usage:<br>  <input (EntityUid)> -> stations:addgrid <grid (EntityUid)>|
-|stations:rmgrid|Removes a grid from the given station.|Usage:<br>  <input (EntityUid)> -> stations:rmgrid <grid (EntityUid)>|
-|stations:rename|Renames the given station.|Usage:<br>  <input (EntityUid)> -> stations:rename <name (String)>|
-|stations:rerollBounties|Clears all the current bounties for the station and gets a new selection.|Usage:<br>  <input (EntityUid)> -> stations:rerollBounties|
-|deletechatmessage:id|Delete a specific chat message by message ID|Usage:<br>  deletechatmessage:id <messageId (UInt32)>|
-|nukechatmessages:usernames|Delete all of the supplied usernames' chat messages posted during this round|Usage:<br>  nukechatmessages:usernames <usernamesCsv (String)>|
-|admins:active|Returns a list of active admins.|Usage:<br>  admins:active -> IEnumerable<ICommonSession>|
-|admins:all|Returns a list of ALL admins, including deadmined ones.|Usage:<br>  admins:all -> IEnumerable<ICommonSession>|
-|marked|Returns the value of $marked as a List<EntityUid>.|Usage:<br>  marked -> IEnumerable<EntityUid>|
-|rejuvenate|Rejuvenates the given entities, restoring them to full health, clearing status effects, etc.|Usage:<br>  <input (IEnumerable<EntityUid>)> -> rejuvenate -> IEnumerable<EntityUid><br>  rejuvenate|
-|solution:get|Grabs the given solution off the given entity.|Usage:<br>  <input (EntityUid)> -> solution:get <name (String)> -> Nullable<SolutionRef><br>  <input (IEnumerable<EntityUid>)> -> solution:get <name (String)> -> IEnumerable<SolutionRef>|
-|solution:adjreagent|Adjusts the given reagent on the given solution.|Usage:<br>  <input (SolutionRef)> -> solution:adjreagent <proto (ProtoId<ReagentPrototype>)> <amount (FixedPoint2)> -> SolutionRef<br>  <input (IEnumerable<SolutionRef>)> -> solution:adjreagent <name (ProtoId<ReagentPrototype>)> <amount (FixedPoint2)> -> IEnumerable<SolutionRef>|
-|tag:list|Lists tags on the given entities.|Usage:<br>  <ent (IEnumerable<EntityUid>)> -> tag:list -> IEnumerable<ProtoId<TagPrototype>>|
-|tag:add|Adds a tag to the given entities.|Usage:<br>  <input (EntityUid)> -> tag:add <tag (ProtoId<TagPrototype>)> -> EntityUid<br>  <input (IEnumerable<EntityUid>)> -> tag:add <tag (ProtoId<TagPrototype>)> -> IEnumerable<EntityUid>|
-|tag:rm|Removes a tag from the given entities.|Usage:<br>  <input (EntityUid)> -> tag:rm <tag (ProtoId<TagPrototype>)> -> EntityUid<br>  <input (IEnumerable<EntityUid>)> -> tag:rm <tag (ProtoId<TagPrototype>)> -> IEnumerable<EntityUid>|
-|tag:addmany|Adds a list of tags to the given entities.|Usage:<br>  <input (EntityUid)> -> tag:addmany <tags (IEnumerable<ProtoId<TagPrototype>>)> -> EntityUid<br>  <input (IEnumerable<EntityUid>)> -> tag:addmany <tags (IEnumerable<ProtoId<TagPrototype>>)> -> IEnumerable<EntityUid>|
-|tag:rmmany|Removes a list of tags from the given entities.|Usage:<br>  <input (EntityUid)> -> tag:rmmany <tags (IEnumerable<ProtoId<TagPrototype>>)> -> EntityUid<br>  <input (IEnumerable<EntityUid>)> -> tag:rmmany <tags (IEnumerable<ProtoId<TagPrototype>>)> -> IEnumerable<EntityUid>|
-|addaccesslog|Adds an access log to this entity. Do note that this bypasses the log's default limit and pause check.|Usage:<br>  addaccesslog <input (EntityUid)> <seconds (Single)> <accessor (String)><br>  <input (EntityUid)> -> addaccesslog <seconds (Single)> <accessor (String)>|
+|cd|Changes the session's current directory to the given relative or absolute path.|Usage:<br><br>  cd <path (ResPath)>|
+|ls:here|Lists the contents of the current directory.|Usage:<br><br>  ls:here -> IEnumerable<ResPath>|
+|ls:in|Lists the contents of the given relative or absolute path.|Usage:<br><br>  ls:in <in (ResPath)> -> IEnumerable<ResPath>|
+|i|Integer constant.|Usage:<br><br>  i <value (Int32)> -> Int32|
+|f|Float constant.|Usage:<br><br>  f <value (Single)> -> Single|
+|s|String constant.|Usage:<br><br>  s <value (String)> -> String|
+|b|Bool constant.|Usage:<br><br>  b <value (Boolean)> -> Boolean|
+|ent|Returns the provided entity ID.|Usage:<br><br>  ent <uid (EntityUid)> -> EntityUid|
+|val|Casts the given value, block, or variable to the given type. This is mostly a workaround for current limitations of variables.|Usage:<br><br>  val <value (T)> -> T|
+|var|Returns the contents of the given variable. This will attempt to automatically infer a variables type. Compound commands that modify a variable may need to use the 'val' command instead.|Usage:<br><br>  var <var (VarRef<T>)> -> T|
+|methods:get|Returns all methods associated with the input type.|Usage:<br><br>  <types (IEnumerable<Type>)> -> methods:get -> IEnumerable<MethodInfo>|
+|methods:overrides|Returns all methods overridden on the input type.|Usage:<br><br>  <types (IEnumerable<Type>)> -> methods:overrides -> IEnumerable<MethodInfo>|
+|methods:overridesfrom|Returns all methods overridden from the given type on the input type.|Usage:<br><br>  <types (IEnumerable<Type>)> -> methods:overridesfrom <t (Type)> -> IEnumerable<MethodInfo>|
+|self|Returns the current attached entity.|Usage:<br><br>  self -> EntityUid|
+|buildinfo|Provides information about the build of the game.|Usage:<br><br>  buildinfo|
+|cmd:list|Returns a list of all commands, for this side.|Usage:<br><br>  cmd:list -> IEnumerable<CommandSpec>|
+|cmd:moo|Asks the important questions.|Usage:<br><br>  cmd:moo -> String|
+|cmd:descloc|Returns the localization string for a command's description.|Usage:<br><br>  <cmd (CommandSpec)> -> cmd:descloc -> String|
+|cmd:info|Returns a CommandSpec for the given command.<br>On its own, this means it'll print the command's help message.|Usage:<br><br>  cmd:info <cmd (CommandSpec)> -> CommandSpec|
+|cmd:getshim|Returns a command's execution shim.|Usage:<br><br>  cmd:getshim <block (Block)> -> MethodInfo|
+|explain|Explains the given expression, providing command descriptions and signatures. This only works for valid expressions, it can't explain commands that it fails to parse.|Usage:<br><br>  explain <expr (CommandRun)>|
+|ioc:registered|Returns all the types registered with IoCManager on the current thread (usually the game thread)|Usage:<br><br>  ioc:registered -> IEnumerable<Type>|
+|ioc:get|Gets an instance of an IoC registration.|Usage:<br><br>  <t (Type)> -> ioc:get -> Object|
+|loc:tryloc|Tries to get a localization string, returning null if unable.|Usage:<br><br>  <str (String)> -> loc:tryloc -> String|
+|loc:loc|Gets a localization string, returning the unlocalized string if unable.|Usage:<br><br>  <str (String)> -> loc:loc -> String|
+|more|Prints the contents of $more, i.e. any extras that Toolshed didn't print from the last command.|Usage:<br><br>  more -> Object|
+|physics:velocity|Returns the velocity of the input entities.|Usage:<br><br>  <input (IEnumerable<EntityUid>)> -> physics:velocity -> IEnumerable<Single>|
+|physics:parent|Returns the parent(s) of the input entities.|Usage:<br><br>  <input (IEnumerable<EntityUid>)> -> physics:parent -> IEnumerable<EntityUid>|
+|physics:angular_velocity|Returns the angular velocity of the given entities.|Usage:<br><br>  <input (IEnumerable<EntityUid>)> -> physics:angular_velocity -> IEnumerable<Single>|
+|search|Searches through the input for the provided value.|Usage:<br><br>  <input (IEnumerable<T>)> -> search <term (String)> -> IEnumerable<FormattedMessage>|
+|stopwatch|Measures the execution time of the given expression.|Usage:<br><br>  stopwatch <expr (CommandRun)> -> Object|
+|types:consumers|Provides all commands that can consume the given type.|Usage:<br><br>  <input (Object)> -> types:consumers|
+|types:tree|Debug tool to return all types the command interpreter can downcast the input to.|Usage:<br><br>  <input (Object)> -> types:tree -> IEnumerable<Type>|
+|types:gettype|Returns the type of the input.|Usage:<br><br>  <input (Object)> -> types:gettype -> Type|
+|types:fullname|Returns the full name of the input type according to CoreCLR.|Usage:<br><br>  <input (Type)> -> types:fullname -> String|
+|+|Performs numeric addition.|Usage:<br><br>  <x (T)> -> + <y (T)> -> T<br><br>  <x (IEnumerable<T>)> -> + <y (IEnumerable<T>)> -> IEnumerable<T><br><br>  <x (Vector2)> -> + <y (Vector2)> -> Vector2<br><br>  <x (IEnumerable<Vector2>)> -> + <y (IEnumerable<Vector2>)> -> IEnumerable<Vector2>|
+|+/|Adds a scalar (single value) to every element in the input.|Usage:<br><br>  <x (IEnumerable<T>)> -> +/ <y (T)> -> IEnumerable<T><br><br>  <x (IEnumerable<Vector2>)> -> +/ <y (Vector2)> -> IEnumerable<Vector2>|
+|-|Performs numeric subtraction.|Usage:<br><br>  <x (T)> -> - <y (T)> -> T<br><br>  <x (IEnumerable<T>)> -> - <y (IEnumerable<T>)> -> IEnumerable<T><br><br>  <x (Vector2)> -> - <y (Vector2)> -> Vector2<br><br>  <x (IEnumerable<Vector2>)> -> - <y (IEnumerable<Vector2>)> -> IEnumerable<Vector2>|
+|-/|Subtracts a scalar (single value) from every element in the input.|Usage:<br><br>  <x (IEnumerable<T>)> -> -/ <y (T)> -> IEnumerable<T><br><br>  <x (IEnumerable<Vector2>)> -> -/ <y (Vector2)> -> IEnumerable<Vector2>|
+|*|Performs numeric multiplication.|Usage:<br><br>  <x (T)> -> * <y (T)> -> T<br><br>  <x (IEnumerable<T>)> -> * <y (IEnumerable<T>)> -> IEnumerable<T><br><br>  <x (Vector2)> -> * <y (Vector2)> -> Vector2<br><br>  <x (IEnumerable<Vector2>)> -> * <y (IEnumerable<Vector2>)> -> IEnumerable<Vector2>|
+|*/|Multiplies a scalar (single value) by every element in the input.|Usage:<br><br>  <x (IEnumerable<T>)> -> */ <y (T)> -> IEnumerable<T><br><br>  <x (IEnumerable<Vector2>)> -> */ <y (Vector2)> -> IEnumerable<Vector2>|
+|/|Performs numeric division.|Usage:<br><br>  <x (T)> -> / <y (T)> -> T<br><br>  <x (IEnumerable<T>)> -> / <y (IEnumerable<T>)> -> IEnumerable<T>|
+|//|Divides every element in the input by a scalar (single value).|Usage:<br><br>  <x (IEnumerable<T>)> -> // <y (T)> -> IEnumerable<T>|
+|%|Computes the modulus of two values.<br>This is usually remainder, check C#'s documentation for the type.|Usage:<br><br>  <x (T)> -> % <y (T)> -> T<br><br>  <x (IEnumerable<T>)> -> % <y (IEnumerable<T>)> -> IEnumerable<T>|
+|%/|Performs the modulus operation over the input with the given constant right-hand value.|Usage:<br><br>  <x (IEnumerable<T>)> -> %/ <y (T)> -> IEnumerable<T>|
+|min|Returns the minimum of two values.|Usage:<br><br>  <x (T)> -> min <y (T)> -> T<br><br>  <x (IEnumerable<T>)> -> min <y (IEnumerable<T>)> -> IEnumerable<T>|
+|max|Returns the maximum of two values.|Usage:<br><br>  <x (T)> -> max <y (T)> -> T<br><br>  <x (IEnumerable<T>)> -> max <y (IEnumerable<T>)> -> IEnumerable<T>|
+|&|Performs bitwise AND.|Usage:<br><br>  <x (T)> -> & <y (T)> -> T<br><br>  <x (IEnumerable<T>)> -> & <y (IEnumerable<T>)> -> IEnumerable<T>|
+|&~|Performs bitwise AND-NOT over the input.|Usage:<br><br>  <x (T)> -> &~ <y (T)> -> T<br><br>  <x (IEnumerable<T>)> -> &~ <y (IEnumerable<T>)> -> IEnumerable<T>|
+|||Performs bitwise OR.|Usage:<br><br>  <x (T)> -> \| <y (T)> -> T<br><br>  <x (IEnumerable<T>)> -> \| <y (IEnumerable<T>)> -> IEnumerable<T>|
+||~|Performs bitwise OR-NOT over the input.|Usage:<br><br>  <x (T)> -> \|~ <y (T)> -> T<br><br>  <x (IEnumerable<T>)> -> \|~ <y (IEnumerable<T>)> -> IEnumerable<T>|
+|^|Performs bitwise XOR.|Usage:<br><br>  <x (T)> -> ^ <y (T)> -> T<br><br>  <x (IEnumerable<T>)> -> ^ <y (IEnumerable<T>)> -> IEnumerable<T>|
+|^~|Performs bitwise XNOR over the input.|Usage:<br><br>  <x (T)> -> ^~ <y (T)> -> T<br><br>  <x (IEnumerable<T>)> -> ^~ <y (IEnumerable<T>)> -> IEnumerable<T>|
+|~|Performs bitwise NOT on the input.|Usage:<br><br>  <x (T)> -> ~ -> T<br><br>  <x (IEnumerable<T>)> -> ~ -> IEnumerable<T>|
+|neg|Negates the input.|Usage:<br><br>  <x (T)> -> neg -> T<br><br>  <x (IEnumerable<T>)> -> neg -> IEnumerable<T>|
+|abs|Computes the absolute value of the input (removing the sign)|Usage:<br><br>  <x (T)> -> abs -> T<br><br>  <x (IEnumerable<T>)> -> abs -> IEnumerable<T>|
+|average|Computes the average (arithmetic mean) of the input.|Usage:<br><br>  <input (IEnumerable<T>)> -> average -> T|
+|bibytecount|Returns the size of the input in bytes, given that the input implements IBinaryInteger.<br>This is NOT sizeof.|Usage:<br><br>  <x (T)> -> bibytecount -> Int32<br><br>  <x (IEnumerable<T>)> -> bibytecount -> IEnumerable<Int32>|
+|shortestbitlength|Returns the minimum number of bits needed to represent the input value.|Usage:<br><br>  <x (T)> -> shortestbitlength -> Int32<br><br>  <x (IEnumerable<T>)> -> shortestbitlength -> IEnumerable<Int32>|
+|countleadzeros|Counts the number of leading binary zeros in the input value.|Usage:<br><br>  <x (T)> -> countleadzeros -> T<br><br>  <x (IEnumerable<T>)> -> countleadzeros -> IEnumerable<T>|
+|counttrailingzeros|Counts the number of trailing binary zeros in the input value.|Usage:<br><br>  <x (T)> -> counttrailingzeros -> T<br><br>  <x (IEnumerable<T>)> -> counttrailingzeros -> IEnumerable<T>|
+|<|Performs a less-than comparison, x < y.|Usage:<br><br>  <x (T)> -> < <y (T)> -> Boolean|
+|>=|Performs a greater-than-or-equal comparison, x >= y.|Usage:<br><br>  <x (T)> -> >= <y (T)> -> Boolean|
+|<=|Performs a less-than-or-equal comparison, x <= y.|Usage:<br><br>  <x (T)> -> <= <y (T)> -> Boolean|
+|==|Performs an equality comparison, returning true if the inputs are equal.|Usage:<br><br>  <x (T)> -> == <y (T)> -> Boolean|
+|!=|Performs an equality comparison, returning true if the inputs are not equal.|Usage:<br><br>  <x (T)> -> != <y (T)> -> Boolean|
+|fpi|pi (3.14159...) as a float.|Usage:<br><br>  fpi -> Single|
+|fe|e (2.71828...) as a float.|Usage:<br><br>  fe -> Single|
+|ftau|tau (6.28318...) as a float.|Usage:<br><br>  ftau -> Single|
+|fepsilon|The epsilon value for a float, exactly 1.4e-45.|Usage:<br><br>  fepsilon -> Single|
+|dpi|pi (3.14159...) as a double.|Usage:<br><br>  dpi -> Double|
+|de|e (2.71828...) as a double.|Usage:<br><br>  de -> Double|
+|dtau|tau (6.28318...) as a double.|Usage:<br><br>  dtau -> Double|
+|depsilon|The epsilon value for a double, exactly 4.9406564584124654E-324.|Usage:<br><br>  depsilon -> Double|
+|hpi|pi (3.14...) as a half.|Usage:<br><br>  hpi -> Half|
+|he|e (2.71...) as a half.|Usage:<br><br>  he -> Half|
+|htau|tau (6.28...) as a half.|Usage:<br><br>  htau -> Half|
+|hepsilon|The epsilon value for a half, exactly 5.9604645E-08.|Usage:<br><br>  hepsilon -> Half|
+|floor|Returns the floor of the input value (rounding toward zero).|Usage:<br><br>  <x (T)> -> floor -> T<br><br>  <x (IEnumerable<T>)> -> floor -> IEnumerable<T>|
+|ceil|Returns the ceil of the input value (rounding away from zero).|Usage:<br><br>  <x (T)> -> ceil -> T<br><br>  <x (IEnumerable<T>)> -> ceil -> IEnumerable<T>|
+|round|Rounds the input value.|Usage:<br><br>  <x (T)> -> round -> T<br><br>  <x (IEnumerable<T>)> -> round -> IEnumerable<T>|
+|trunc|Truncates the input value.|Usage:<br><br>  <x (T)> -> trunc -> T<br><br>  <x (IEnumerable<T>)> -> trunc -> IEnumerable<T>|
+|round2frac|Rounds the input value to the specified number of fractional digits.|Usage:<br><br>  <x (T)> -> round2frac <frac (Int32)> -> T<br><br>  <x (IEnumerable<T>)> -> round2frac <frac (Int32)> -> IEnumerable<T>|
+|exponentbytecount|Returns the number of bytes required to store the exponent.|Usage:<br><br>  <x (T)> -> exponentbytecount -> Int32<br><br>  <x (IEnumerable<T>)> -> exponentbytecount -> IEnumerable<Int32>|
+|significandbytecount|Returns the number of bytes required to store the significand.|Usage:<br><br>  <x (T)> -> significandbytecount -> Int32<br><br>  <x (IEnumerable<T>)> -> significandbytecount -> IEnumerable<Int32>|
+|significandbitcount|Returns the exact bit length of the significand.|Usage:<br><br>  <x (T)> -> significandbitcount -> Int32<br><br>  <x (IEnumerable<T>)> -> significandbitcount -> IEnumerable<Int32>|
+|exponentshortestbitcount|Returns the minimum number of bits to store the exponent.|Usage:<br><br>  <x (T)> -> exponentshortestbitcount -> Int32<br><br>  <x (IEnumerable<T>)> -> exponentshortestbitcount -> IEnumerable<Int32>|
+|stepnext|Steps to the next float value, adding one to the significand with carry.|Usage:<br><br>  <x (T)> -> stepnext -> T<br><br>  <x (IEnumerable<T>)> -> stepnext -> IEnumerable<T>|
+|stepprev|Steps to the previous float value, subtracting one from the significand with carry.|Usage:<br><br>  <x (T)> -> stepprev -> T<br><br>  <x (IEnumerable<T>)> -> stepprev -> IEnumerable<T>|
+|join|Joins two sequences together into one sequence.|Usage:<br><br>  <x (String)> -> join <y (String)> -> String<br><br>  <x (IEnumerable<T>)> -> join <y (IEnumerable<T>)> -> IEnumerable<T>|
+|append|Appends a value to the input enumerable.|Usage:<br><br>  <x (IEnumerable<T>)> -> append <y (T)> -> IEnumerable<T>|
+|?|Replaces the input with the type's default value if it is null, albeit only for value types (not objects).|Usage:<br><br>  <value (Nullable<TIn>)> -> ? <follower (Block<TIn,TOut>)> -> TOut|
+|or?|If the input is null, uses the provided alternate value.|Usage:<br><br>  <value (T)> -> or? <alternate (ValueRef<T>)> -> T<br><br>  <value (Nullable<T>)> -> or? <alternate (ValueRef<T>)> -> T|
+|??|Prints the given value transparently, for debug prints in a command run.|Usage:<br><br>  <value (T)> -> ?? -> T<br><br>  <value (IEnumerable<T>)> -> ?? -> IEnumerable<T>|
+|checkedto|Converts from the input numeric type to the target, erroring if not possible.|Usage:<br><br>  <x (T)> -> checkedto -> TOut<br><br>  <x (IEnumerable<T>)> -> checkedto -> IEnumerable<TOut>|
+|saturateto|Converts from the input numeric type to the target, saturating if the value is out of range.<br>For example, converting 382 to a byte would saturate to 255 (the maximum value of a byte).|Usage:<br><br>  <x (T)> -> saturateto -> TOut<br><br>  <x (IEnumerable<T>)> -> saturateto -> IEnumerable<TOut>|
+|truncto|Converts from the input numeric type to the target, with truncation.<br>In the case of integers, this is a bit cast with sign extension.|Usage:<br><br>  <x (T)> -> truncto -> TOut<br><br>  <x (IEnumerable<T>)> -> truncto -> IEnumerable<TOut>|
+|iscanonical|Returns whether the input is in canonical form.|Usage:<br><br>  <x (T)> -> iscanonical -> Boolean<br><br>  <x (IEnumerable<T>)> -> iscanonical -> IEnumerable<Boolean>|
+|iscomplex|Returns whether the input is a complex number (by value, not by type)|Usage:<br><br>  <x (T)> -> iscomplex -> Boolean<br><br>  <x (IEnumerable<T>)> -> iscomplex -> IEnumerable<Boolean>|
+|iseven|Returns whether the input is even.<br>Not a javascript package.|Usage:<br><br>  <x (T)> -> iseven -> Boolean<br><br>  <x (IEnumerable<T>)> -> iseven -> IEnumerable<Boolean>|
+|isodd|Returns whether the input is odd.|Usage:<br><br>  <x (T)> -> isodd -> Boolean<br><br>  <x (IEnumerable<T>)> -> isodd -> IEnumerable<Boolean>|
+|isfinite|Returns whether the input is finite.|Usage:<br><br>  <x (T)> -> isfinite -> Boolean<br><br>  <x (IEnumerable<T>)> -> isfinite -> IEnumerable<Boolean>|
+|isimaginary|Returns whether the input is purely imaginary (no real part).|Usage:<br><br>  <x (T)> -> isimaginary -> Boolean<br><br>  <x (IEnumerable<T>)> -> isimaginary -> IEnumerable<Boolean><br><br>  <x (ICommonSession)> -> isimaginary -> Boolean|
+|isinfinite|Returns whether the input is infinite.|Usage:<br><br>  <x (T)> -> isinfinite -> Boolean<br><br>  <x (IEnumerable<T>)> -> isinfinite -> IEnumerable<Boolean>|
+|isinteger|Returns whether the input is an integer (by value, not by type)|Usage:<br><br>  <x (T)> -> isinteger -> Boolean<br><br>  <x (IEnumerable<T>)> -> isinteger -> IEnumerable<Boolean>|
+|isnan|Returns whether the input is Not a Number (NaN).<br>This is a special floating point value, so this is by value, not by type.|Usage:<br><br>  <x (T)> -> isnan -> Boolean<br><br>  <x (IEnumerable<T>)> -> isnan -> IEnumerable<Boolean>|
+|isnegative|Returns whether the input is negative.|Usage:<br><br>  <x (T)> -> isnegative -> Boolean<br><br>  <x (IEnumerable<T>)> -> isnegative -> IEnumerable<Boolean>|
+|ispositive|Returns whether the input is positive.|Usage:<br><br>  <x (T)> -> ispositive -> Boolean<br><br>  <x (IEnumerable<T>)> -> ispositive -> IEnumerable<Boolean>|
+|isreal|Returns whether the input is purely real (no imaginary part).|Usage:<br><br>  <x (T)> -> isreal -> Boolean<br><br>  <x (IEnumerable<T>)> -> isreal -> IEnumerable<Boolean><br><br>  <x (ICommonSession)> -> isreal -> Boolean|
+|issubnormal|Returns whether the input is in sub-normal form.|Usage:<br><br>  <x (T)> -> issubnormal -> Boolean<br><br>  <x (IEnumerable<T>)> -> issubnormal -> IEnumerable<Boolean>|
+|iszero|Returns whether the input is zero.|Usage:<br><br>  <x (T)> -> iszero -> Boolean<br><br>  <x (IEnumerable<T>)> -> iszero -> IEnumerable<Boolean>|
+|pow|Computes the power of its lefthand to its righthand. x^y.|Usage:<br><br>  <x (T)> -> pow <y (T)> -> T<br><br>  <x (IEnumerable<T>)> -> pow <y (IEnumerable<T>)> -> IEnumerable<T>|
+|rng:to|Returns a number between the input (inclusive) and the argument (exclusive).|Usage:<br><br>  <from (Int32)> -> rng:to <to (Int32)> -> Int32<br><br>  <from (Single)> -> rng:to <to (Single)> -> Single|
+|rng:from|Returns a number between the argument (inclusive) and the input (exclusive))|Usage:<br><br>  <to (Int32)> -> rng:from <from (Int32)> -> Int32<br><br>  <to (Single)> -> rng:from <from (Single)> -> Single|
+|rng:prob|Returns a boolean based on the input probability/chance (from 0 to 1)|Usage:<br><br>  <prob (Single)> -> rng:prob -> Boolean|
+|sqrt|Computes the square root of its input.|Usage:<br><br>  <x (T)> -> sqrt -> T<br><br>  <x (IEnumerable<T>)> -> sqrt -> IEnumerable<T>|
+|cbrt|Computes the cube root of its input.|Usage:<br><br>  <x (T)> -> cbrt -> T<br><br>  <x (IEnumerable<T>)> -> cbrt -> IEnumerable<T>|
+|root|Computes the Nth root of its input.|Usage:<br><br>  <x (T)> -> root <y (Int32)> -> T<br><br>  <x (IEnumerable<T>)> -> root <y (IEnumerable<Int32>)> -> IEnumerable<T>|
+|hypot|Computes the hypotenuse of a triangle with the given sides A and B.|Usage:<br><br>  <x (T)> -> hypot <y (T)> -> T<br><br>  <x (IEnumerable<T>)> -> hypot <y (IEnumerable<T>)> -> IEnumerable<T>|
+|sum|Computes the sum of the input.|Usage:<br><br>  <input (IEnumerable<T>)> -> sum -> T|
+|sin|Computes the sine of the input.|Usage:<br><br>  <x (T)> -> sin -> T<br><br>  <x (IEnumerable<T>)> -> sin -> IEnumerable<T>|
+|sinpi|Computes the sine of the input multiplied by pi.|Usage:<br><br>  <x (T)> -> sinpi -> T<br><br>  <x (IEnumerable<T>)> -> sinpi -> IEnumerable<T>|
+|asin|Computes the arcsine of the input.|Usage:<br><br>  <x (T)> -> asin -> T<br><br>  <x (IEnumerable<T>)> -> asin -> IEnumerable<T>|
+|asinpi|Computes the arcsine of the input multiplied by pi.|Usage:<br><br>  <x (T)> -> asinpi -> T<br><br>  <x (IEnumerable<T>)> -> asinpi -> IEnumerable<T>|
+|cos|Computes the cosine of the input.|Usage:<br><br>  <x (T)> -> cos -> T<br><br>  <x (IEnumerable<T>)> -> cos -> IEnumerable<T>|
+|cospi|Computes the cosine of the input multiplied by pi.|Usage:<br><br>  <x (T)> -> cospi -> T<br><br>  <x (IEnumerable<T>)> -> cospi -> IEnumerable<T>|
+|acos|Computes the arcosine of the input.|Usage:<br><br>  <x (T)> -> acos -> T<br><br>  <x (IEnumerable<T>)> -> acos -> IEnumerable<T>|
+|acospi|Computes the arcosine of the input multiplied by pi.|Usage:<br><br>  <x (T)> -> acospi -> T<br><br>  <x (IEnumerable<T>)> -> acospi -> IEnumerable<T>|
+|tan|Computes the tangent of the input.|Usage:<br><br>  <x (T)> -> tan -> T<br><br>  <x (IEnumerable<T>)> -> tan -> IEnumerable<T>|
+|tanpi|Computes the tangent of the input multiplied by pi.|Usage:<br><br>  <x (T)> -> tanpi -> T<br><br>  <x (IEnumerable<T>)> -> tanpi -> IEnumerable<T>|
+|atan|Computes the arctangent of the input.|Usage:<br><br>  <x (T)> -> atan -> T<br><br>  <x (IEnumerable<T>)> -> atan -> IEnumerable<T>|
+|atanpi|Computes the arctangent of the input multiplied by pi.|Usage:<br><br>  <x (T)> -> atanpi -> T<br><br>  <x (IEnumerable<T>)> -> atanpi -> IEnumerable<T>|
+|any|Returns true if there's any values in the input, otherwise false.|Usage:<br><br>  <input (IEnumerable<T>)> -> any -> Boolean|
+|as|Casts the input to the given type.<br>Effectively a type hint if you know the type but the interpreter does not.|Usage:<br><br>  <value (TIn)> -> as -> TOut|
+|contains|Returns whether the input enumerable contains the specified value.|The behaviour of this command can be inverted using the "not" prefix.<br><br>Usage:<br><br>  <input (IEnumerable<T>)> -> [not] contains <value (T)> -> Boolean|
+|count|Counts the amount of entries in it's input, returning an integer.|Usage:<br><br>  <enumerable (IEnumerable<T>)> -> count -> Int32|
+|emplace|Runs the given block over it's inputs, with the input value placed into the variable $value within the block.<br>Additionally breaks out $wx, $wy, $proto, $desc, $name, and $paused for entities.<br>Can also have breakout values for other types, consult the documentation for that type for further info.|Usage:<br><br>  <value (TIn)> -> emplace <block (Block)> -> TOut<br><br>  <value (IEnumerable<TIn>)> -> emplace <block (Block)> -> IEnumerable<TOut>|
+|first|Returns the first entry of the given enumerable.|Usage:<br><br>  <input (IEnumerable<T>)> -> first -> T|
+|isempty|Returns true if the input is empty, otherwise false.|The behaviour of this command can be inverted using the "not" prefix.<br><br>Usage:<br><br>  <input (T)> -> [not] isempty -> Boolean|
+|isnull|Returns true if the input is null, otherwise false.|The behaviour of this command can be inverted using the "not" prefix.<br><br>Usage:<br><br>  <input (Object)> -> [not] isnull -> Boolean|
+|iterate|Iterates the given function over the input N times, returning a list of results.<br>Think of this like successively applying the function to a value, tracking all the intermediate values.|Usage:<br><br>  <value (T)> -> iterate <block (Block<T,T>)> <times (Int32)> -> IEnumerable<T>|
+|map|Maps the input over the given block, with the provided expected return type.<br>This command may be modified to not need an explicit return type in the future.|Usage:<br><br>  <value (IEnumerable<TIn>)> -> map <block (Block<TIn,TOut>)> -> IEnumerable<TOut>|
+|pick|Picks a random value from the input.|Usage:<br><br>  <input (IEnumerable<T>)> -> pick -> T|
+|reduce|Given a block to use as a reducer, turns a sequence into a single value.<br>The left hand side of the block is implied, and the right hand is stored in $value.|Usage:<br><br>  <input (IEnumerable<T>)> -> reduce <reducer (Block)> -> T|
+|select|Selects N objects or N% of objects from the input.<br>One can additionally invert this command with not to make it select everything except N objects instead.|The behaviour of this command can be inverted using the "not" prefix.<br><br>Usage:<br><br>  <enumerable (IEnumerable<TR>)> -> [not] select <quantity (Quantity)> -> IEnumerable<TR>|
+|take|Takes N values from the input sequence|Usage:<br><br>  <input (IEnumerable<T>)> -> take <amount (Int32)> -> IEnumerable<T>|
+|tee|Tees the input into the given block, ignoring the block's result.<br>This essentially lets you have a branch in your code to do multiple operations on one value.|Usage:<br><br>  <value (IEnumerable<TIn>)> -> tee <block (Block<TIn,TOut>)> -> IEnumerable<TIn>|
+|unique|Filters the input sequence for uniqueness, removing duplicate values.|Usage:<br><br>  <input (IEnumerable<T>)> -> unique -> IEnumerable<T>|
+|where|Given some input sequence IEnumerable<T>, takes a block of signature T -> bool that decides if each input value should be included in the output sequence.|Usage:<br><br>  <input (IEnumerable<T>)> -> where <check (Block<T,Boolean>)> -> IEnumerable<T>|
+|=>|Assigns the input to a variable.|Usage:<br><br>  <input (T)> -> => <var (WriteableVarRef<T>)> -> T<br><br>  <input (IEnumerable<T>)> -> => <var (WriteableVarRef<List<T>>)> -> List<T>|
+|vars|Provides a list of all variables set in this session.|Usage:<br><br>  vars|
+|bin|"Bins" the input, counting up how many times each unique element occurs.|Usage:<br><br>  <input (IEnumerable<T>)> -> bin -> IDictionary<T,Int32>|
+|extremes|Returns the two extreme ends of a list, interwoven.|Usage:<br><br>  <input (IEnumerable<T>)> -> extremes -> IEnumerable<T>|
+|sortby|Sorts the input least to greatest by the computed key.|Usage:<br><br>  <input (IEnumerable<T>)> -> sortby <orderer (Block<T,TOrd>)> -> IEnumerable<T>|
+|sort|Sorts the input least to greatest.|Usage:<br><br>  <input (IEnumerable<T>)> -> sort -> IEnumerable<T>|
+|sortdownby|Sorts the input greatest to least by the computed key.|Usage:<br><br>  <input (IEnumerable<T>)> -> sortdownby <orderer (Block<T,TOrd>)> -> IEnumerable<T>|
+|sortdown|Sorts the input greatest to least.|Usage:<br><br>  <input (IEnumerable<T>)> -> sortdown -> IEnumerable<T>|
+|sortmapby|Sorts the input least to greatest by the computed key, replacing the value with it's computed key afterward.|Usage:<br><br>  <input (IEnumerable<T>)> -> sortmapby <orderer (Block<T,TOrd>)> -> IEnumerable<TOrd>|
+|sortmapdownby|Sorts the input greatest to least by the computed key, replacing the value with it's computed key afterward.|Usage:<br><br>  <input (IEnumerable<T>)> -> sortmapdownby <orderer (Block<T,TOrd>)> -> IEnumerable<TOrd>|
+|iota|Returns a list of numbers 1 to N.|Usage:<br><br>  <count (T)> -> iota -> IEnumerable<T>|
+|rep|Repeats the input value N times to form a sequence.|Usage:<br><br>  <value (T)> -> rep <amount (Int32)> -> IEnumerable<T>|
+|to|Returns a list of numbers N to M.|Usage:<br><br>  <start (T)> -> to <end (T)> -> IEnumerable<T>|
+|curtick|The current game tick.|Usage:<br><br>  curtick -> GameTick|
+|curtime|The current game time (a TimeSpan)|Usage:<br><br>  curtime -> TimeSpan|
+|realtime|The current realtime since startup (a TimeSpan)|Usage:<br><br>  realtime -> TimeSpan|
+|servertime|The current server game time, or zero if we are the server (a TimeSpan)|Usage:<br><br>  servertime -> TimeSpan|
+|delete|Deletes the input entities.|Usage:<br><br>  <entities (IEnumerable<EntityUid>)> -> delete<br><br>  delete <entity (EntityUid)>|
+|do|Backwards compatibility with BQL, applies the given old commands over the input sequence.|Usage:<br><br>  <input (IEnumerable<T>)> -> do <command (String)> -> IEnumerable<T>|
+|entities|Returns all entities on the server.|Usage:<br><br>  entities -> IEnumerable<EntityUid>|
+|named|Filters the input entities by their name, with the regex ^selector$.|The behaviour of this command can be inverted using the "not" prefix.<br><br>Usage:<br><br>  <input (IEnumerable<EntityUid>)> -> [not] named <regex (String)> -> IEnumerable<EntityUid>|
+|nearby|Creates a new list of all entities nearby the inputs within the given range.|Usage:<br><br>  <input (IEnumerable<EntityUid>)> -> nearby <range (Single)> -> IEnumerable<EntityUid>|
+|paused|Filters the input entities by whether or not they are paused.|The behaviour of this command can be inverted using the "not" prefix.<br><br>Usage:<br><br>  <entities (IEnumerable<EntityUid>)> -> [not] paused -> IEnumerable<EntityUid>|
+|prototyped|Filters the input entities by their prototype.|The behaviour of this command can be inverted using the "not" prefix.<br><br>Usage:<br><br>  <input (IEnumerable<EntityUid>)> -> [not] prototyped <prototype (EntProtoId)> -> IEnumerable<EntityUid>|
+|replace|Replaces the input entities with the given prototype, preserving position and rotation (but nothing else)|Usage:<br><br>  <input (IEnumerable<EntityUid>)> -> replace <prototype (EntProtoId)> -> IEnumerable<EntityUid>|
+|spawn:at|Spawns an entity at the given coordinates.|Usage:<br><br>  <target (EntityCoordinates)> -> spawn:at <proto (EntProtoId)> -> EntityUid<br><br>  <target (IEnumerable<EntityCoordinates>)> -> spawn:at <proto (EntProtoId)> -> IEnumerable<EntityUid>|
+|spawn:on|Spawns an entity on the given entity, at it's coordinates.|Usage:<br><br>  <target (EntityUid)> -> spawn:on <proto (EntProtoId)> -> EntityUid<br><br>  <target (IEnumerable<EntityUid>)> -> spawn:on <proto (EntProtoId)> -> IEnumerable<EntityUid>|
+|spawn:attached|Spawns an entity attached to the given entity, at (0 0) relative to it.|Usage:<br><br>  <target (EntityUid)> -> spawn:attached <proto (EntProtoId)> -> EntityUid<br><br>  <target (IEnumerable<EntityUid>)> -> spawn:attached <proto (EntProtoId)> -> IEnumerable<EntityUid>|
+|with|Filters the input entities by whether or not they have the given component.|The behaviour of this command can be inverted using the "not" prefix.<br><br>Usage:<br><br>  <input (IEnumerable<EntityUid>)> -> [not] with <component (Type)> -> IEnumerable<EntityUid><br><br>  <input (IEnumerable<EntityPrototype>)> -> [not] with <component (Type)> -> IEnumerable<EntityPrototype><br><br>  <input (IEnumerable<ProtoId<T>>)> -> [not] with <protoId (ProtoId<T>)> -> IEnumerable<ProtoId<T>>|
+|mappos|Returns an entity's coordinates relative to it's current map.|Usage:<br><br>  <ent (EntityUid)> -> mappos -> EntityCoordinates<br><br>  <input (IEnumerable<EntityUid>)> -> mappos -> IEnumerable<EntityCoordinates>|
+|pos|Returns an entity's coordinates.|Usage:<br><br>  <ent (EntityUid)> -> pos -> EntityCoordinates<br><br>  <input (IEnumerable<EntityUid>)> -> pos -> IEnumerable<EntityCoordinates><br><br>  pos -> EntityCoordinates|
+|tp:coords|Teleports the target to the given coordinates.|Usage:<br><br>  <teleporter (EntityUid)> -> tp:coords <target (EntityCoordinates)> -> EntityUid<br><br>  <teleporters (IEnumerable<EntityUid>)> -> tp:coords <target (EntityCoordinates)> -> IEnumerable<EntityUid>|
+|tp:to|Teleports the target to the given other entity.|Usage:<br><br>  <teleporter (EntityUid)> -> tp:to <target (EntityUid)> -> EntityUid<br><br>  <teleporters (IEnumerable<EntityUid>)> -> tp:to <target (EntityUid)> -> IEnumerable<EntityUid>|
+|tp:into|Teleports the target "into" the given other entity, attaching it at (0 0) relative to it.|Usage:<br><br>  <teleporter (EntityUid)> -> tp:into <target (EntityUid)> -> EntityUid<br><br>  <teleporters (IEnumerable<EntityUid>)> -> tp:into <target (EntityUid)> -> IEnumerable<EntityUid>|
+|allcomps|Returns all components on the given entity.|Usage:<br><br>  <input (EntityUid)> -> allcomps -> IEnumerable<IComponent>|
+|comp:get|Gets the given component from the given entity.|Usage:<br><br>  <input (IEnumerable<EntityUid>)> -> comp:get -> IEnumerable<T><br><br>  <input (EntityUid)> -> comp:get -> T|
+|comp:add|Adds the given component to the given entity.|Usage:<br><br>  <input (EntityUid)> -> comp:add -> EntityUid<br><br>  <input (IEnumerable<EntityUid>)> -> comp:add -> IEnumerable<EntityUid>|
+|comp:rm|Removes the given component from the entity.|Usage:<br><br>  <input (EntityUid)> -> comp:rm -> EntityUid<br><br>  <input (IEnumerable<EntityUid>)> -> comp:rm -> IEnumerable<EntityUid>|
+|comp:ensure|Ensures the given entity has the given component.|Usage:<br><br>  <input (EntityUid)> -> comp:ensure -> EntityUid<br><br>  <input (IEnumerable<EntityUid>)> -> comp:ensure -> IEnumerable<EntityUid>|
+|comp:has|Check if the given entity has the given component.|Usage:<br><br>  <input (EntityUid)> -> comp:has -> Boolean<br><br>  <input (IEnumerable<EntityUid>)> -> comp:has -> IEnumerable<Boolean>|
+|entitysystemupdateorder:tick|Lists the tick update order of entity systems.|Usage:<br><br>  entitysystemupdateorder:tick -> IEnumerable<Type>|
+|entitysystemupdateorder:frame|Lists the frame update order of entity systems.|Usage:<br><br>  entitysystemupdateorder:frame -> IEnumerable<Type>|
+|actor:controlled|Filters entities by whether or not they're actively controlled.|Usage:<br><br>  <input (IEnumerable<EntityUid>)> -> actor:controlled -> IEnumerable<EntityUid>|
+|actor:session|Returns the sessions associated with the input entities.|Usage:<br><br>  <input (IEnumerable<EntityUid>)> -> actor:session -> IEnumerable<ICommonSession>|
+|player:list|Returns a list of all player sessions.|Usage:<br><br>  player:list -> IEnumerable<ICommonSession>|
+|player:self|Returns the current player session.|Usage:<br><br>  player:self -> ICommonSession|
+|player:imm|Returns the session associated with the player given as argument.|Usage:<br><br>  player:imm <username (String)> -> ICommonSession|
+|player:entity|Returns the entities of the input sessions.|Usage:<br><br>  <sessions (IEnumerable<ICommonSession>)> -> player:entity -> IEnumerable<EntityUid><br><br>  <sessions (ICommonSession)> -> player:entity -> EntityUid<br><br>  player:entity <username (String)> -> EntityUid|
+|visualize|Takes the input list of entities and puts them into a UI window for easy browsing.|Usage:<br><br>  <input (IEnumerable<EntityUid>)> -> visualize|
+|runverbas|Runs a verb over the input entities with the given user.|Usage:<br><br>  <input (IEnumerable<NetEntity>)> -> runverbas <runner (EntityUid)> <verb (String)> -> IEnumerable<NetEntity>|
+|acmd:perms|Returns the admin permissions of the given command, if any.|Usage:<br><br>  <command (CommandSpec)> -> acmd:perms -> AdminFlags[]|
+|acmd:caninvoke|Check if the given player can invoke the given command.|Usage:<br><br>  <command (CommandSpec)> -> acmd:caninvoke <player (ICommonSession)> -> Boolean|
+|laws:list|Returns a list of all law bound entities.|Usage:<br><br>  laws:list -> IEnumerable<EntityUid>|
+|laws:get|Returns all of the laws for a given entity.|Usage:<br><br>  <lawbound (EntityUid)> -> laws:get -> IEnumerable<String>|
+|polymorph|Polymorphs the input entity with the given prototype.|Usage:<br><br>  <input (EntityUid)> -> polymorph <protoId (ProtoId<PolymorphPrototype>)> -> Nullable<EntityUid><br><br>  <input (IEnumerable<EntityUid>)> -> polymorph <protoId (ProtoId<PolymorphPrototype>)> -> IEnumerable<EntityUid>|
+|unpolymorph|Reverts a polymorph.|Usage:<br><br>  <input (EntityUid)> -> unpolymorph -> Nullable<EntityUid><br><br>  <input (IEnumerable<EntityUid>)> -> unpolymorph -> IEnumerable<EntityUid>|
+|stationevent:simulate|Simulates N number of rounds in which events will occur and prints the occurrences of every event after.|Usage:<br><br>  stationevent:simulate <eventScheduler (EntityPrototype)> <rounds (Int32)> <playerCount (Int32)> <roundEndMean (Single)> <roundEndStdDev (Single)> -> IEnumerable<ValueTuple<String,Single>>|
+|stationevent:lsprob|Lists the probability of different station events occuring out of the entire pool.|Usage:<br><br>  stationevent:lsprob <eventScheduler (EntityPrototype)> -> IEnumerable<ValueTuple<String,Single>>|
+|stationevent:lsprobtime|Lists the probability of different station events occuring based on the specified length of a round.|Usage:<br><br>  stationevent:lsprobtime <eventScheduler (EntityPrototype)> <time (Single)> -> IEnumerable<ValueTuple<String,Single>>|
+|stationevent:prob|Returns the probability of a single station event occuring out of the entire pool.|Usage:<br><br>  stationevent:prob <eventScheduler (EntityPrototype)> <eventId (String)> -> Single|
+|mind:get|Grabs the mind from the entity, if any.|Usage:<br><br>  <session (ICommonSession)> -> mind:get -> MindComponent<br><br>  <ent (EntityUid)> -> mind:get -> MindComponent|
+|mind:control|Assumes control of an entity with the given player.|Usage:<br><br>  <target (EntityUid)> -> mind:control <player (ICommonSession)> -> EntityUid|
+|language:add|Adds a new language to the piped entity. The two last arguments indicate whether it should be spoken/understood. Example: 'self language:add "Canilunzt" true true'|Usage:<br><br>  <input (EntityUid)> -> language:add <language (ProtoId<LanguagePrototype>)> <canSpeak (Boolean)> <canUnderstand (Boolean)> -> EntityUid|
+|language:rm|Removes a language from the piped entity. Works similarly to language:add. Example: 'self language:rm "TauCetiBasic" true true'.|Usage:<br><br>  <input (EntityUid)> -> language:rm <language (ProtoId<LanguagePrototype>)> <removeSpeak (Boolean)> <removeUnderstand (Boolean)> -> EntityUid|
+|language:lsspoken|Lists all languages the entity can speak. Example: 'self language:lsspoken'|Usage:<br><br>  <input (EntityUid)> -> language:lsspoken -> IEnumerable<ProtoId<LanguagePrototype>>|
+|language:lsunderstood|Lists all languages the entity can understand. Example: 'self language:lssunderstood'|Usage:<br><br>  <input (EntityUid)> -> language:lsunderstood -> IEnumerable<ProtoId<LanguagePrototype>>|
+|translator:addlang|Adds a new target language to the piped translator entity. See language:add for details.|Usage:<br><br>  <input (EntityUid)> -> translator:addlang <language (ProtoId<LanguagePrototype>)> <addSpeak (Boolean)> <addUnderstand (Boolean)> -> EntityUid|
+|translator:rmlang|Removes a target language from the piped translator entity. See language:rm for details.|Usage:<br><br>  <input (EntityUid)> -> translator:rmlang <language (ProtoId<LanguagePrototype>)> <removeSpeak (Boolean)> <removeUnderstand (Boolean)> -> EntityUid|
+|translator:addrequired|Adds a new required language to the piped translator entity. Example: 'ent 1234 translator:addrequired "TauCetiBasic"'|Usage:<br><br>  <input (EntityUid)> -> translator:addrequired <language (ProtoId<LanguagePrototype>)> -> EntityUid|
+|translator:rmrequired|Removes a required language from the piped translator entity. Example: 'ent 1234 translator:rmrequired "TauCetiBasic"'|Usage:<br><br>  <input (EntityUid)> -> translator:rmrequired <language (ProtoId<LanguagePrototype>)> -> EntityUid|
+|translator:lsspoken|Lists all spoken languages for the piped translator entity. Example: 'ent 1234 translator:lsspoken'|Usage:<br><br>  <input (EntityUid)> -> translator:lsspoken -> IEnumerable<ProtoId<LanguagePrototype>>|
+|translator:lsunderstood|Lists all understood languages for the piped translator entity. Example: 'ent 1234 translator:lssunderstood'|Usage:<br><br>  <input (EntityUid)> -> translator:lsunderstood -> IEnumerable<ProtoId<LanguagePrototype>>|
+|translator:lsrequired|Lists all required languages for the piped translator entity. Example: 'ent 1234 translator:lsrequired'|Usage:<br><br>  <input (EntityUid)> -> translator:lsrequired -> IEnumerable<ProtoId<LanguagePrototype>>|
+|jobs:jobs|Returns all jobs on a station.|Usage:<br><br>  <station (EntityUid)> -> jobs:jobs -> IEnumerable<JobSlotRef><br><br>  <stations (IEnumerable<EntityUid>)> -> jobs:jobs -> IEnumerable<JobSlotRef>|
+|jobs:job|Returns a given job on a station.|Usage:<br><br>  <station (EntityUid)> -> jobs:job <job (ProtoId<JobPrototype>)> -> JobSlotRef<br><br>  <stations (IEnumerable<EntityUid>)> -> jobs:job <job (ProtoId<JobPrototype>)> -> IEnumerable<JobSlotRef>|
+|jobs:isinfinite|Returns true if the input job is infinite, otherwise false.|The behaviour of this command can be inverted using the "not" prefix.<br><br>Usage:<br><br>  <job (JobSlotRef)> -> [not] jobs:isinfinite -> Boolean<br><br>  <jobs (IEnumerable<JobSlotRef>)> -> [not] jobs:isinfinite -> IEnumerable<Boolean>|
+|jobs:adjust|Adjusts the number of slots for the given job.|Usage:<br><br>  <ref (JobSlotRef)> -> jobs:adjust <by (Int32)> -> JobSlotRef<br><br>  <ref (IEnumerable<JobSlotRef>)> -> jobs:adjust <by (Int32)> -> IEnumerable<JobSlotRef>|
+|jobs:set|Sets the number of slots for the given job.|Usage:<br><br>  <ref (JobSlotRef)> -> jobs:set <by (Int32)> -> JobSlotRef<br><br>  <ref (IEnumerable<JobSlotRef>)> -> jobs:set <by (Int32)> -> IEnumerable<JobSlotRef>|
+|jobs:amount|Returns the number of slots for the given job.|Usage:<br><br>  <ref (JobSlotRef)> -> jobs:amount -> UInt32<br><br>  <ref (IEnumerable<JobSlotRef>)> -> jobs:amount -> IEnumerable<UInt32>|
+|stations:list|Returns a list of all stations.|Usage:<br><br>  stations:list -> IEnumerable<EntityUid>|
+|stations:get|Gets the active station, if and only if there is only one.|Usage:<br><br>  stations:get -> EntityUid|
+|stations:getowningstation|Gets the station that a given entity is "owned by" (within)|Usage:<br><br>  <input (IEnumerable<EntityUid>)> -> stations:getowningstation -> IEnumerable<Nullable<EntityUid>><br><br>  <input (EntityUid)> -> stations:getowningstation -> Nullable<EntityUid>|
+|stations:largestgrid|Returns the largest grid the given station has, if any.|Usage:<br><br>  <input (EntityUid)> -> stations:largestgrid -> Nullable<EntityUid><br><br>  <input (IEnumerable<EntityUid>)> -> stations:largestgrid -> IEnumerable<Nullable<EntityUid>>|
+|stations:grids|Returns all grids associated with the input station.|Usage:<br><br>  <input (EntityUid)> -> stations:grids -> IEnumerable<EntityUid><br><br>  <input (IEnumerable<EntityUid>)> -> stations:grids -> IEnumerable<EntityUid>|
+|stations:config|Returns the config associated with the input station, if any.|Usage:<br><br>  <input (EntityUid)> -> stations:config -> StationConfig<br><br>  <input (IEnumerable<EntityUid>)> -> stations:config -> IEnumerable<StationConfig>|
+|stations:addgrid|Adds a grid to the given station.|Usage:<br><br>  <input (EntityUid)> -> stations:addgrid <grid (EntityUid)>|
+|stations:rmgrid|Removes a grid from the given station.|Usage:<br><br>  <input (EntityUid)> -> stations:rmgrid <grid (EntityUid)>|
+|stations:rename|Renames the given station.|Usage:<br><br>  <input (EntityUid)> -> stations:rename <name (String)>|
+|stations:rerollBounties|Clears all the current bounties for the station and gets a new selection.|Usage:<br><br>  <input (EntityUid)> -> stations:rerollBounties|
+|deletechatmessage:id|Delete a specific chat message by message ID|Usage:<br><br>  deletechatmessage:id <messageId (UInt32)>|
+|nukechatmessages:usernames|Delete all of the supplied usernames' chat messages posted during this round|Usage:<br><br>  nukechatmessages:usernames <usernamesCsv (String)>|
+|admins:active|Returns a list of active admins.|Usage:<br><br>  admins:active -> IEnumerable<ICommonSession>|
+|admins:all|Returns a list of ALL admins, including deadmined ones.|Usage:<br><br>  admins:all -> IEnumerable<ICommonSession>|
+|marked|Returns the value of $marked as a List<EntityUid>.|Usage:<br><br>  marked -> IEnumerable<EntityUid>|
+|rejuvenate|Rejuvenates the given entities, restoring them to full health, clearing status effects, etc.|Usage:<br><br>  <input (IEnumerable<EntityUid>)> -> rejuvenate -> IEnumerable<EntityUid><br><br>  rejuvenate|
+|solution:get|Grabs the given solution off the given entity.|Usage:<br><br>  <input (EntityUid)> -> solution:get <name (String)> -> Nullable<SolutionRef><br><br>  <input (IEnumerable<EntityUid>)> -> solution:get <name (String)> -> IEnumerable<SolutionRef>|
+|solution:adjreagent|Adjusts the given reagent on the given solution.|Usage:<br><br>  <input (SolutionRef)> -> solution:adjreagent <proto (ProtoId<ReagentPrototype>)> <amount (FixedPoint2)> -> SolutionRef<br><br>  <input (IEnumerable<SolutionRef>)> -> solution:adjreagent <name (ProtoId<ReagentPrototype>)> <amount (FixedPoint2)> -> IEnumerable<SolutionRef>|
+|tag:list|Lists tags on the given entities.|Usage:<br><br>  <ent (IEnumerable<EntityUid>)> -> tag:list -> IEnumerable<ProtoId<TagPrototype>>|
+|tag:add|Adds a tag to the given entities.|Usage:<br><br>  <input (EntityUid)> -> tag:add <tag (ProtoId<TagPrototype>)> -> EntityUid<br><br>  <input (IEnumerable<EntityUid>)> -> tag:add <tag (ProtoId<TagPrototype>)> -> IEnumerable<EntityUid>|
+|tag:rm|Removes a tag from the given entities.|Usage:<br><br>  <input (EntityUid)> -> tag:rm <tag (ProtoId<TagPrototype>)> -> EntityUid<br><br>  <input (IEnumerable<EntityUid>)> -> tag:rm <tag (ProtoId<TagPrototype>)> -> IEnumerable<EntityUid>|
+|tag:addmany|Adds a list of tags to the given entities.|Usage:<br><br>  <input (EntityUid)> -> tag:addmany <tags (IEnumerable<ProtoId<TagPrototype>>)> -> EntityUid<br><br>  <input (IEnumerable<EntityUid>)> -> tag:addmany <tags (IEnumerable<ProtoId<TagPrototype>>)> -> IEnumerable<EntityUid>|
+|tag:rmmany|Removes a list of tags from the given entities.|Usage:<br><br>  <input (EntityUid)> -> tag:rmmany <tags (IEnumerable<ProtoId<TagPrototype>>)> -> EntityUid<br><br>  <input (IEnumerable<EntityUid>)> -> tag:rmmany <tags (IEnumerable<ProtoId<TagPrototype>>)> -> IEnumerable<EntityUid>|
+|addaccesslog|Adds an access log to this entity. Do note that this bypasses the log's default limit and pause check.|Usage:<br><br>  addaccesslog <input (EntityUid)> <seconds (Single)> <accessor (String)><br><br>  <input (EntityUid)> -> addaccesslog <seconds (Single)> <accessor (String)>|
